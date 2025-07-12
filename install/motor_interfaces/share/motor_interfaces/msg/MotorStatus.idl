@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from motor_interfaces/msg/MotorStatus.msg
+// generated code does not contain a copyright notice
+
+
+module motor_interfaces {
+  module msg {
+    struct MotorStatus {
+      uint8 device;
+
+      uint8 channel;
+
+      uint8 id;
+
+      float current_position;
+
+      float current_velocity;
+
+      float current_torque;
+    };
+  };
+};

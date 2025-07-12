@@ -1,0 +1,4 @@
+motors:
+  - device: ttyacm0
+    id: 1
+    channel: 1

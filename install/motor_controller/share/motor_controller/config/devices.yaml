@@ -1,0 +1,6 @@
+devices:
+  - path: /dev/ttyACM0
+    name: ttyacm0
+
+  # - path: /dev/ttyACM1
+  #   name: ttyacm1

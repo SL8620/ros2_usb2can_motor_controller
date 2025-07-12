@@ -1,0 +1,6 @@
+motors:
+  - name: "motor_0"
+    type: "RS03"
+    device: "usb2can_0"
+    can_channel: 1
+    can_id: 1
