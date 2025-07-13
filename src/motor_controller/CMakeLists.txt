@@ -23,8 +23,14 @@ include_directories(
   ${motor_interfaces_INCLUDE_DIRS}
 )
 
+set(SOURCES
+  src/motor_node.cpp
+  src/math_ops.cpp
+  src/rs03_motor_parser.cpp
+)
+
 # 添加可执行文件
-add_executable(motor_node src/motor_node.cpp)
+add_executable(motor_node ${SOURCES})
 
 # 链接依赖库
 ament_target_dependencies(motor_node
@@ -35,14 +41,19 @@ ament_target_dependencies(motor_node
   can_usb_driver
 )
 
-# 安装节点可执行文件
+# 安装目标
 install(TARGETS motor_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# 安装头文件
+install(DIRECTORY include/
+  DESTINATION include
+)
+
 # 安装配置文件
-install(DIRECTORY config
-  DESTINATION share/${PROJECT_NAME}
+install(DIRECTORY config/
+  DESTINATION share/${PROJECT_NAME}/config
 )
 
 # 导出 package

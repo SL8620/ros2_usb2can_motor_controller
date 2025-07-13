@@ -9,6 +9,8 @@
 #include <thread>
 #include <algorithm>
 
+using namespace can_usb_driver;
+
 std::mutex CanUsbDevice::coutMutex_;
 
 static std::string findDefaultDevice() 

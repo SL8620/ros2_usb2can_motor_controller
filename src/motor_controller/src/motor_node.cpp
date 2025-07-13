@@ -15,7 +15,7 @@
 
 // 电机协议解析器
 #include "motor_controller/motor_parser_base.hpp"  // 解析器基类
-#include "motor_controller/rs03_parser.hpp"        // 灵足电机协议实现
+#include "motor_controller/rs03_motor_parser.hpp"        // 灵足电机协议实现
 
 // 简化类型引用
 using std::placeholders::_1;
@@ -125,9 +125,10 @@ private:
                 auto device = std::make_shared<can_usb_driver::CanUsbDevice>(dev_path, name);
                 
                 // 设置数据回调函数（收到CAN数据时触发）
-                device->set_feedback_callback([this, name](const can_usb_driver::CanMessage& msg) {
-                    handle_can_feedback(name, msg);  // 处理CAN反馈数据
-                });
+                // device->setReceiveCallback(
+                //     [this](const can_usb_driver::CanUsbDevice* dev, const can_usb_driver::CanMessage& msg) {this->handle_can_message(dev, msg);
+                // });
+
 
                 device_map_[name] = device;  // 加入设备列表
                 RCLCPP_INFO(get_logger(), "Loaded device: %s at %s", name.c_str(), dev_path.c_str());
@@ -239,7 +240,7 @@ private:
     void handle_can_feedback(const std::string& dev_name, const can_usb_driver::CanMessage& msg) 
     {
         // 通过设备+通道+ID定位电机
-        std::string key = get_key(dev_name, msg.channel, msg.id);
+        std::string key = get_key(dev_name, msg.canPort, msg.id);
         
         if (motor_map_.count(key)) 
         {
@@ -280,14 +281,15 @@ private:
 
             // 构造CAN消息
             can_usb_driver::CanMessage can_msg;
-            can_msg.channel = msg->channel;  // 设置CAN通道
+            can_msg.canPort = msg->channel;  // 设置CAN通道
             can_msg.id = msg->id;            // 设置目标ID
+            can_msg.canIdType = CanId_classic;
             
             // 将ROS指令转换为CAN数据帧
             parser->packCommand(*msg, can_msg.data);
             
             // 通过对应设备发送CAN消息
-            device_map_[motor.device]->send(can_msg);
+            device_map_[motor.device]->sendCanMessage(can_msg);
             
             RCLCPP_DEBUG(get_logger(), "Sent command to %s", key.c_str());
         } 

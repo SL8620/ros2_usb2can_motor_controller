@@ -1,4 +1,4 @@
-uint8 device
+string device
 uint8 channel
 uint8 id
 float32 current_position

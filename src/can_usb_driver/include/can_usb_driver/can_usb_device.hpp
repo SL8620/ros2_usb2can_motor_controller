@@ -1,6 +1,4 @@
-#ifndef CAN_USB_DEVICE_H
-#define CAN_USB_DEVICE_H
-
+#pragma once
 #include <thread>
 #include <atomic>
 #include <vector>
@@ -16,44 +14,46 @@
 #define CanId_classic  0x00
 #define CanId_extended 0x01
 
-class CanUsbDevice;
+namespace can_usb_driver{
 
-struct CanMessage 
-{
-    uint8_t canPort;
-    uint8_t canIdType;
-    uint32_t id;
-    std::vector<uint8_t> data;
-};
+    class CanUsbDevice;
 
-using CanMessageCallback = std::function<void(const CanUsbDevice*,const CanMessage&)>;
+    struct CanMessage 
+    {
+        uint8_t canPort;
+        uint8_t canIdType;
+        uint32_t id;
+        std::vector<uint8_t> data;
+    };
 
-class CanUsbDevice 
-{
-public:
-    std::string devName_;
-    static std::mutex coutMutex_;
-    CanUsbDevice(const std::string& devicePath = "", const std::string& devName_= "");
-    ~CanUsbDevice();
+    using CanMessageCallback = std::function<void(const CanUsbDevice*,const CanMessage&)>;
 
-    bool open();
-    void close();
+    class CanUsbDevice 
+    {
+    public:
+        std::string devName_;
+        static std::mutex coutMutex_;
+        CanUsbDevice(const std::string& devicePath = "", const std::string& devName_= "");
+        ~CanUsbDevice();
 
-    bool sendCanMessage(const CanMessage& msg);
-    void startReceiveThread();
-    void stopReceiveThread();
-    void setReceiveCallback(CanMessageCallback cb); 
+        bool open();
+        void close();
 
-private:
-    void receiveLoop();
-    bool parseBuffer(std::vector<uint8_t>& buffer, CanMessage& msg);
+        bool sendCanMessage(const CanMessage& msg);
+        void startReceiveThread();
+        void stopReceiveThread();
+        void setReceiveCallback(CanMessageCallback cb); 
 
-    std::string devicePath_;
-    int fd_;
-    std::thread recvThread_;
-    std::atomic<bool> running_;
-    std::mutex ioMutex_;
-    CanMessageCallback receiveCallback_;
-};
+    private:
+        void receiveLoop();
+        bool parseBuffer(std::vector<uint8_t>& buffer, CanMessage& msg);
 
-#endif
+        std::string devicePath_;
+        int fd_;
+        std::thread recvThread_;
+        std::atomic<bool> running_;
+        std::mutex ioMutex_;
+        CanMessageCallback receiveCallback_;
+    };
+}
+
