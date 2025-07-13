@@ -41,6 +41,8 @@ ament_target_dependencies(motor_node
   can_usb_driver
 )
 
+target_link_libraries(motor_node yaml-cpp)
+
 # 安装目标
 install(TARGETS motor_node
   DESTINATION lib/${PROJECT_NAME}

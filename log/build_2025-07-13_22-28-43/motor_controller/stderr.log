@@ -1,0 +1,21 @@
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_control(motor_interfaces::msg::MotorControl_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:275:40:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmotor_interfaces::msg::MotorControl_<std::allocator<void> >::_device_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  275 |         std::string key = get_key([01;31m[Kmsg->device[m[K, msg->channel, msg->id);
+      |                                   [01;31m[K~~~~~^~~~~~[m[K
+      |                                        [01;31m[K|[m[K
+      |                                        [01;31m[Kmotor_interfaces::msg::MotorControl_<std::allocator<void> >::_device_type {aka unsigned char}[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:89:44:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::string MotorNode::get_key(const string&, uint8_t, uint8_t) const[m[K’
+   89 |     std::string get_key([01;36m[Kconst std::string& device[m[K, uint8_t channel, uint8_t id) const {
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_command(motor_interfaces::msg::MotorCommand_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:308:40:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmotor_interfaces::msg::MotorCommand_<std::allocator<void> >::_device_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  308 |         std::string key = get_key([01;31m[Kmsg->device[m[K, msg->channel, msg->id);
+      |                                   [01;31m[K~~~~~^~~~~~[m[K
+      |                                        [01;31m[K|[m[K
+      |                                        [01;31m[Kmotor_interfaces::msg::MotorCommand_<std::allocator<void> >::_device_type {aka unsigned char}[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:89:44:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::string MotorNode::get_key(const string&, uint8_t, uint8_t) const[m[K’
+   89 |     std::string get_key([01;36m[Kconst std::string& device[m[K, uint8_t channel, uint8_t id) const {
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/motor_node.dir/build.make:63：CMakeFiles/motor_node.dir/src/motor_node.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/motor_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -1,0 +1,589 @@
+[0.000000] (-) TimerEvent: {}
+[0.000790] (can_usb_driver) JobQueued: {'identifier': 'can_usb_driver', 'dependencies': OrderedDict()}
+[0.001009] (motor_interfaces) JobQueued: {'identifier': 'motor_interfaces', 'dependencies': OrderedDict()}
+[0.001189] (motor_controller) JobQueued: {'identifier': 'motor_controller', 'dependencies': OrderedDict([('can_usb_driver', '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver'), ('motor_interfaces', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces')])}
+[0.001284] (can_usb_driver) JobStarted: {'identifier': 'can_usb_driver'}
+[0.014857] (motor_interfaces) JobStarted: {'identifier': 'motor_interfaces'}
+[0.029495] (can_usb_driver) JobProgress: {'identifier': 'can_usb_driver', 'progress': 'cmake'}
+[0.030556] (can_usb_driver) JobProgress: {'identifier': 'can_usb_driver', 'progress': 'build'}
+[0.031707] (can_usb_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1760'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1398'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11709'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45784'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1821,unix/nvidia-desktop:/tmp/.ICE-unix/1821'), ('INVOCATION_ID', 'd0c69387163744b6bf8732c98b6d13ff'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.045248] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'cmake'}
+[0.046345] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'build'}
+[0.047270] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1760'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1398'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11709'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45784'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1821,unix/nvidia-desktop:/tmp/.ICE-unix/1821'), ('INVOCATION_ID', 'd0c69387163744b6bf8732c98b6d13ff'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.093529] (motor_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.094135] (motor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)\n'}
+[0.099173] (-) TimerEvent: {}
+[0.117113] (can_usb_driver) StdoutLine: {'line': b'[100%] Built target can_usb_driver\n'}
+[0.127221] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.127645] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.137677] (can_usb_driver) CommandEnded: {'returncode': 0}
+[0.139319] (can_usb_driver) JobProgress: {'identifier': 'can_usb_driver', 'progress': 'install'}
+[0.159594] (can_usb_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1760'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1398'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11709'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45784'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1821,unix/nvidia-desktop:/tmp/.ICE-unix/1821'), ('INVOCATION_ID', 'd0c69387163744b6bf8732c98b6d13ff'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.179455] (can_usb_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.180008] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/libcan_usb_driver.a\n'}
+[0.180218] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include\n'}
+[0.180377] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include/can_usb_driver\n'}
+[0.180520] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include/can_usb_driver/can_usb_device.hpp\n'}
+[0.180650] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/package_run_dependencies/can_usb_driver\n'}
+[0.180760] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/parent_prefix_path/can_usb_driver\n'}
+[0.180863] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/ament_prefix_path.sh\n'}
+[0.180982] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/ament_prefix_path.dsv\n'}
+[0.181080] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/path.sh\n'}
+[0.181193] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/path.dsv\n'}
+[0.181316] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.bash\n'}
+[0.181453] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.sh\n'}
+[0.181611] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.zsh\n'}
+[0.181713] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.dsv\n'}
+[0.181812] (can_usb_driver) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.dsv\n'}
+[0.181903] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/packages/can_usb_driver\n'}
+[0.181996] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/export_can_usb_driverExport.cmake\n'}
+[0.182090] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/export_can_usb_driverExport-noconfig.cmake\n'}
+[0.182180] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.182270] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.182359] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/can_usb_driverConfig.cmake\n'}
+[0.182447] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/can_usb_driverConfig-version.cmake\n'}
+[0.182538] (can_usb_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.xml\n'}
+[0.184856] (can_usb_driver) CommandEnded: {'returncode': 0}
+[0.199468] (-) TimerEvent: {}
+[0.219816] (can_usb_driver) JobEnded: {'identifier': 'can_usb_driver', 'rc': 0}
+[0.299822] (-) TimerEvent: {}
+[0.391155] (motor_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.394635] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.399122] (motor_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.399900] (-) TimerEvent: {}
+[0.500470] (-) TimerEvent: {}
+[0.591625] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600555] (-) TimerEvent: {}
+[0.652263] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.700674] (-) TimerEvent: {}
+[0.801192] (-) TimerEvent: {}
+[0.844877] (motor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.901386] (-) TimerEvent: {}
+[0.984826] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.995696] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.001455] (-) TimerEvent: {}
+[1.031147] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.031891] (motor_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.064804] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.065473] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.065782] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[1.100593] (motor_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.101552] (-) TimerEvent: {}
+[1.146548] (motor_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.161685] (motor_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces\n'}
+[1.201676] (-) TimerEvent: {}
+[1.209972] (motor_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.225657] (motor_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.301891] (-) TimerEvent: {}
+[1.402663] (-) TimerEvent: {}
+[1.503451] (-) TimerEvent: {}
+[1.604188] (-) TimerEvent: {}
+[1.695208] (motor_interfaces) StdoutLine: {'line': b'[  4%] Built target motor_interfaces__cpp\n'}
+[1.704354] (-) TimerEvent: {}
+[1.709936] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_generator_c\x1b[0m\n'}
+[1.710391] (motor_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.710575] (motor_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.711280] (motor_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.730872] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c.o\x1b[0m\n'}
+[1.731389] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__functions.c.o\x1b[0m\n'}
+[1.731554] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_status__functions.c.o\x1b[0m\n'}
+[1.804510] (-) TimerEvent: {}
+[1.813034] (motor_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmotor_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[1.865965] (motor_interfaces) StdoutLine: {'line': b'[ 19%] Built target motor_interfaces__rosidl_generator_c\n'}
+[1.883490] (motor_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.883935] (motor_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.904656] (-) TimerEvent: {}
+[2.005222] (-) TimerEvent: {}
+[2.101954] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.105322] (-) TimerEvent: {}
+[2.122372] (motor_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_control__type_support.cpp.o\x1b[0m\n'}
+[2.122916] (motor_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[2.123275] (motor_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_status__type_support.cpp.o\x1b[0m\n'}
+[2.142072] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.163555] (motor_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_status__type_support.cpp.o\x1b[0m\n'}
+[2.164062] (motor_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_control__type_support.cpp.o\x1b[0m\n'}
+[2.166222] (motor_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_command__type_support.cpp.o\x1b[0m\n'}
+[2.195129] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.205452] (-) TimerEvent: {}
+[2.237047] (motor_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_command__type_support.cpp.o\x1b[0m\n'}
+[2.242165] (motor_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_control__type_support.cpp.o\x1b[0m\n'}
+[2.243703] (motor_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_status__type_support.cpp.o\x1b[0m\n'}
+[2.298073] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[2.305674] (-) TimerEvent: {}
+[2.326005] (motor_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_control__type_support.cpp.o\x1b[0m\n'}
+[2.334408] (motor_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[2.395849] (motor_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_status__type_support.cpp.o\x1b[0m\n'}
+[2.405863] (-) TimerEvent: {}
+[2.431433] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.459383] (motor_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.469828] (motor_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_control__type_support.c.o\x1b[0m\n'}
+[2.470352] (motor_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_command__type_support.c.o\x1b[0m\n'}
+[2.506059] (-) TimerEvent: {}
+[2.539426] (motor_interfaces) StdoutLine: {'line': b'[ 55%] Built target motor_interfaces__rosidl_typesupport_c\n'}
+[2.546159] (motor_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_status__type_support.c.o\x1b[0m\n'}
+[2.606269] (-) TimerEvent: {}
+[2.608113] (motor_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libmotor_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.608605] (motor_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.659724] (motor_interfaces) StdoutLine: {'line': b'[ 61%] Built target motor_interfaces__rosidl_typesupport_introspection_c\n'}
+[2.660256] (motor_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.670541] (motor_interfaces) StdoutLine: {'line': b'[ 63%] Built target motor_interfaces__rosidl_typesupport_cpp\n'}
+[2.706437] (-) TimerEvent: {}
+[2.756204] (motor_interfaces) StdoutLine: {'line': b'[ 63%] Built target motor_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.806617] (-) TimerEvent: {}
+[2.907266] (-) TimerEvent: {}
+[2.978243] (motor_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.007354] (-) TimerEvent: {}
+[3.100791] (motor_interfaces) StdoutLine: {'line': b'[ 65%] Built target motor_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[3.107426] (-) TimerEvent: {}
+[3.118419] (motor_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.207626] (-) TimerEvent: {}
+[3.308372] (-) TimerEvent: {}
+[3.409104] (-) TimerEvent: {}
+[3.509727] (-) TimerEvent: {}
+[3.567115] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[3.589743] (motor_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_control__type_support_c.cpp.o\x1b[0m\n'}
+[3.590216] (motor_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_command__type_support_c.cpp.o\x1b[0m\n'}
+[3.590375] (motor_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_status__type_support_c.cpp.o\x1b[0m\n'}
+[3.609881] (-) TimerEvent: {}
+[3.710531] (-) TimerEvent: {}
+[3.811168] (-) TimerEvent: {}
+[3.911785] (-) TimerEvent: {}
+[4.012431] (-) TimerEvent: {}
+[4.113128] (-) TimerEvent: {}
+[4.174405] (motor_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.213254] (-) TimerEvent: {}
+[4.298508] (motor_interfaces) StdoutLine: {'line': b'[ 76%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[4.313361] (-) TimerEvent: {}
+[4.333604] (motor_interfaces) StdoutLine: {'line': b'[ 76%] Built target motor_interfaces\n'}
+[4.369457] (motor_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.413516] (-) TimerEvent: {}
+[4.514033] (-) TimerEvent: {}
+[4.614571] (-) TimerEvent: {}
+[4.715152] (-) TimerEvent: {}
+[4.815684] (-) TimerEvent: {}
+[4.916189] (-) TimerEvent: {}
+[5.016736] (-) TimerEvent: {}
+[5.117315] (-) TimerEvent: {}
+[5.217830] (-) TimerEvent: {}
+[5.255058] (motor_interfaces) StdoutLine: {'line': b'[ 78%] Built target motor_interfaces__py\n'}
+[5.274963] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__python\x1b[0m\n'}
+[5.304094] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_control_s.c.o\x1b[0m\n'}
+[5.304614] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_status_s.c.o\x1b[0m\n'}
+[5.304758] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_command_s.c.o\x1b[0m\n'}
+[5.317982] (-) TimerEvent: {}
+[5.418607] (-) TimerEvent: {}
+[5.456874] (motor_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/libmotor_interfaces__python.so\x1b[0m\n'}
+[5.517398] (motor_interfaces) StdoutLine: {'line': b'[ 87%] Built target motor_interfaces__python\n'}
+[5.518625] (-) TimerEvent: {}
+[5.535432] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[5.535884] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[5.536013] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[5.562185] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.562740] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.562886] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.618828] (-) TimerEvent: {}
+[5.687533] (motor_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[5.689192] (motor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[5.689463] (motor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[5.718985] (-) TimerEvent: {}
+[5.739836] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[5.740334] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_c__pyext\n'}
+[5.773933] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.795337] (motor_interfaces) CommandEnded: {'returncode': 0}
+[5.797921] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'install'}
+[5.798500] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1760'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1398'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11709'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45784'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1821,unix/nvidia-desktop:/tmp/.ICE-unix/1821'), ('INVOCATION_ID', 'd0c69387163744b6bf8732c98b6d13ff'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy')]), 'shell': False}
+[5.817202] (motor_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.818014] (motor_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.818517] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/rosidl_interfaces/motor_interfaces\n'}
+[5.819027] (-) TimerEvent: {}
+[5.819390] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__functions.h\n'}
+[5.819631] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__struct.h\n'}
+[5.819856] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__type_support.h\n'}
+[5.820084] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__functions.h\n'}
+[5.820319] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__struct.h\n'}
+[5.820547] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__type_support.h\n'}
+[5.820771] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__functions.h\n'}
+[5.820999] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__struct.h\n'}
+[5.821221] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__type_support.h\n'}
+[5.821439] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_command.h\n'}
+[5.821653] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_control.h\n'}
+[5.821870] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_status.h\n'}
+[5.822085] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.822462] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/library_path.sh\n'}
+[5.822822] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/library_path.dsv\n'}
+[5.823641] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_fastrtps_c.h\n'}
+[5.823870] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_fastrtps_c.h\n'}
+[5.824186] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_fastrtps_c.h\n'}
+[5.824375] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.824921] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[5.825808] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.826026] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.826250] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.826471] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.827039] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.827727] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_introspection_c.h\n'}
+[5.827955] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_introspection_c.h\n'}
+[5.828178] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_introspection_c.h\n'}
+[5.828416] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.829199] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__builder.hpp\n'}
+[5.829446] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__struct.hpp\n'}
+[5.829665] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__traits.hpp\n'}
+[5.829885] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__type_support.hpp\n'}
+[5.830106] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__builder.hpp\n'}
+[5.830333] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__struct.hpp\n'}
+[5.830553] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__traits.hpp\n'}
+[5.830804] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__type_support.hpp\n'}
+[5.831020] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__builder.hpp\n'}
+[5.831239] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__struct.hpp\n'}
+[5.831459] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__traits.hpp\n'}
+[5.831685] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__type_support.hpp\n'}
+[5.831901] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_command.hpp\n'}
+[5.832114] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_control.hpp\n'}
+[5.832329] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/motor_status.hpp\n'}
+[5.832545] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[5.833203] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.833431] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.833655] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.834010] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.sh\n'}
+[5.834348] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.dsv\n'}
+[5.834717] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/__init__.py\n'}
+[5.835319] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/msg/__init__.py\n'}
+[5.835546] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/msg/_motor_command.py\n'}
+[5.835770] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/msg/_motor_control.py\n'}
+[5.835988] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/msg/_motor_status.py\n'}
+[5.836539] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[5.837162] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[5.837614] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[5.838149] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__python.so\n'}
+[5.838515] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorCommand.idl\n'}
+[5.838985] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorControl.idl\n'}
+[5.839293] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorStatus.idl\n'}
+[5.839643] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorCommand.msg\n'}
+[5.839972] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorControl.msg\n'}
+[5.840318] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorStatus.msg\n'}
+[5.840669] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/package_run_dependencies/motor_interfaces\n'}
+[5.841013] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/parent_prefix_path/motor_interfaces\n'}
+[5.841361] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.sh\n'}
+[5.841719] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.dsv\n'}
+[5.842042] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/path.sh\n'}
+[5.842367] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/path.dsv\n'}
+[5.842715] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.bash\n'}
+[5.843038] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.sh\n'}
+[5.843365] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.zsh\n'}
+[5.843688] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.dsv\n'}
+[5.843953] (motor_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.dsv\n'}
+[5.859893] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/packages/motor_interfaces\n'}
+[5.860339] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[5.860491] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.860764] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.861094] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.861428] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.861760] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.862089] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.862428] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig.cmake\n'}
+[5.862742] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig-version.cmake\n'}
+[5.863076] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.xml\n'}
+[5.863488] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so\n'}
+[5.864110] (motor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so" to ""\n'}
+[5.864408] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[5.864922] (motor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.865186] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so\n'}
+[5.865650] (motor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[5.865959] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[5.866496] (motor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.866779] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so\n'}
+[5.867237] (motor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[5.910349] (motor_interfaces) StdoutLine: {'line': b"Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages/motor_interfaces/__init__.py'...\n"}
+[5.918780] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_generator_cExport.cmake\n'}
+[5.918984] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.919097] (-) TimerEvent: {}
+[5.919463] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.919674] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.920229] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[5.920355] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.920512] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_generator_cppExport.cmake\n'}
+[5.920666] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.920819] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.921115] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[5.921263] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.925440] (motor_interfaces) CommandEnded: {'returncode': 0}
+[5.979913] (motor_interfaces) JobEnded: {'identifier': 'motor_interfaces', 'rc': 0}
+[5.981928] (motor_controller) JobStarted: {'identifier': 'motor_controller'}
+[5.999634] (motor_controller) JobProgress: {'identifier': 'motor_controller', 'progress': 'cmake'}
+[6.000871] (motor_controller) JobProgress: {'identifier': 'motor_controller', 'progress': 'build'}
+[6.001447] (motor_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1760'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1398'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11709'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45784'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1821,unix/nvidia-desktop:/tmp/.ICE-unix/1821'), ('INVOCATION_ID', 'd0c69387163744b6bf8732c98b6d13ff'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy')]), 'shell': False}
+[6.019229] (-) TimerEvent: {}
+[6.046555] (motor_controller) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[6.079738] (motor_controller) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.119360] (-) TimerEvent: {}
+[6.220011] (-) TimerEvent: {}
+[6.320797] (-) TimerEvent: {}
+[6.343531] (motor_controller) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[6.385618] (motor_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.389569] (motor_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.420857] (-) TimerEvent: {}
+[6.521525] (-) TimerEvent: {}
+[6.555502] (motor_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.616351] (motor_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[6.617839] (motor_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.621589] (-) TimerEvent: {}
+[6.722190] (-) TimerEvent: {}
+[6.792144] (motor_controller) StdoutLine: {'line': b'-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[6.822285] (-) TimerEvent: {}
+[6.859271] (motor_controller) StdoutLine: {'line': b'-- Found motor_interfaces: 0.1.0 (/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake)\n'}
+[6.870506] (motor_controller) StdoutLine: {'line': b'-- Found can_usb_driver: 0.1.0 (/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake)\n'}
+[6.922473] (-) TimerEvent: {}
+[6.968431] (motor_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.978925] (motor_controller) StdoutLine: {'line': b'-- Generating done\n'}
+[6.984039] (motor_controller) StdoutLine: {'line': b'-- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller\n'}
+[7.022658] (-) TimerEvent: {}
+[7.035169] (motor_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_node\x1b[0m\n'}
+[7.077549] (motor_controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motor_node.dir/src/rs03_motor_parser.cpp.o\x1b[0m\n'}
+[7.078021] (motor_controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o\x1b[0m\n'}
+[7.122742] (-) TimerEvent: {}
+[7.223234] (-) TimerEvent: {}
+[7.324037] (-) TimerEvent: {}
+[7.424752] (-) TimerEvent: {}
+[7.525491] (-) TimerEvent: {}
+[7.626257] (-) TimerEvent: {}
+[7.727068] (-) TimerEvent: {}
+[7.827883] (-) TimerEvent: {}
+[7.928709] (-) TimerEvent: {}
+[8.029526] (-) TimerEvent: {}
+[8.130340] (-) TimerEvent: {}
+[8.231156] (-) TimerEvent: {}
+[8.331935] (-) TimerEvent: {}
+[8.432727] (-) TimerEvent: {}
+[8.533480] (-) TimerEvent: {}
+[8.634305] (-) TimerEvent: {}
+[8.735158] (-) TimerEvent: {}
+[8.835967] (-) TimerEvent: {}
+[8.936791] (-) TimerEvent: {}
+[9.037611] (-) TimerEvent: {}
+[9.138444] (-) TimerEvent: {}
+[9.239263] (-) TimerEvent: {}
+[9.340036] (-) TimerEvent: {}
+[9.440679] (-) TimerEvent: {}
+[9.541304] (-) TimerEvent: {}
+[9.641968] (-) TimerEvent: {}
+[9.742799] (-) TimerEvent: {}
+[9.843617] (-) TimerEvent: {}
+[9.944454] (-) TimerEvent: {}
+[10.045274] (-) TimerEvent: {}
+[10.146096] (-) TimerEvent: {}
+[10.246931] (-) TimerEvent: {}
+[10.347717] (-) TimerEvent: {}
+[10.448530] (-) TimerEvent: {}
+[10.549350] (-) TimerEvent: {}
+[10.650179] (-) TimerEvent: {}
+[10.751038] (-) TimerEvent: {}
+[10.851867] (-) TimerEvent: {}
+[10.952692] (-) TimerEvent: {}
+[11.053535] (-) TimerEvent: {}
+[11.154357] (-) TimerEvent: {}
+[11.255168] (-) TimerEvent: {}
+[11.355945] (-) TimerEvent: {}
+[11.456751] (-) TimerEvent: {}
+[11.557561] (-) TimerEvent: {}
+[11.658372] (-) TimerEvent: {}
+[11.759219] (-) TimerEvent: {}
+[11.860041] (-) TimerEvent: {}
+[11.960861] (-) TimerEvent: {}
+[12.061672] (-) TimerEvent: {}
+[12.162509] (-) TimerEvent: {}
+[12.263334] (-) TimerEvent: {}
+[12.364133] (-) TimerEvent: {}
+[12.464952] (-) TimerEvent: {}
+[12.565781] (-) TimerEvent: {}
+[12.666630] (-) TimerEvent: {}
+[12.767457] (-) TimerEvent: {}
+[12.868299] (-) TimerEvent: {}
+[12.969122] (-) TimerEvent: {}
+[13.069936] (-) TimerEvent: {}
+[13.170764] (-) TimerEvent: {}
+[13.271564] (-) TimerEvent: {}
+[13.372349] (-) TimerEvent: {}
+[13.472986] (-) TimerEvent: {}
+[13.573697] (-) TimerEvent: {}
+[13.674399] (-) TimerEvent: {}
+[13.775242] (-) TimerEvent: {}
+[13.876064] (-) TimerEvent: {}
+[13.976889] (-) TimerEvent: {}
+[14.077704] (-) TimerEvent: {}
+[14.178507] (-) TimerEvent: {}
+[14.279334] (-) TimerEvent: {}
+[14.380124] (-) TimerEvent: {}
+[14.480961] (-) TimerEvent: {}
+[14.581765] (-) TimerEvent: {}
+[14.682569] (-) TimerEvent: {}
+[14.783444] (-) TimerEvent: {}
+[14.884257] (-) TimerEvent: {}
+[14.985079] (-) TimerEvent: {}
+[15.085893] (-) TimerEvent: {}
+[15.186676] (-) TimerEvent: {}
+[15.287280] (-) TimerEvent: {}
+[15.387921] (-) TimerEvent: {}
+[15.488741] (-) TimerEvent: {}
+[15.589555] (-) TimerEvent: {}
+[15.690364] (-) TimerEvent: {}
+[15.791168] (-) TimerEvent: {}
+[15.891853] (-) TimerEvent: {}
+[15.992659] (-) TimerEvent: {}
+[16.093470] (-) TimerEvent: {}
+[16.194266] (-) TimerEvent: {}
+[16.295057] (-) TimerEvent: {}
+[16.395836] (-) TimerEvent: {}
+[16.496651] (-) TimerEvent: {}
+[16.597468] (-) TimerEvent: {}
+[16.698298] (-) TimerEvent: {}
+[16.799172] (-) TimerEvent: {}
+[16.899978] (-) TimerEvent: {}
+[17.000803] (-) TimerEvent: {}
+[17.101607] (-) TimerEvent: {}
+[17.202423] (-) TimerEvent: {}
+[17.303250] (-) TimerEvent: {}
+[17.404063] (-) TimerEvent: {}
+[17.504872] (-) TimerEvent: {}
+[17.605688] (-) TimerEvent: {}
+[17.706490] (-) TimerEvent: {}
+[17.807333] (-) TimerEvent: {}
+[17.908134] (-) TimerEvent: {}
+[18.008951] (-) TimerEvent: {}
+[18.109777] (-) TimerEvent: {}
+[18.210581] (-) TimerEvent: {}
+[18.311401] (-) TimerEvent: {}
+[18.412226] (-) TimerEvent: {}
+[18.513027] (-) TimerEvent: {}
+[18.613847] (-) TimerEvent: {}
+[18.714733] (-) TimerEvent: {}
+[18.815535] (-) TimerEvent: {}
+[18.916349] (-) TimerEvent: {}
+[19.017146] (-) TimerEvent: {}
+[19.017792] (motor_controller) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable motor_node\x1b[0m\n'}
+[19.117338] (-) TimerEvent: {}
+[19.218146] (-) TimerEvent: {}
+[19.319004] (-) TimerEvent: {}
+[19.419826] (-) TimerEvent: {}
+[19.520656] (-) TimerEvent: {}
+[19.593279] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Exception::Exception(YAML::Mark const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.594193] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML9ExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML9ExceptionC5ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x5c): undefined reference to `vtable for YAML::Exception'\n"}
+[19.594759] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML9ExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML9ExceptionC5ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x60): undefined reference to `vtable for YAML::Exception'\n"}
+[19.595234] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::RepresentationException::RepresentationException(YAML::Mark const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.595724] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML23RepresentationExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML23RepresentationExceptionC5ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x24): undefined reference to `vtable for YAML::RepresentationException'\n"}
+[19.596121] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML23RepresentationExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML23RepresentationExceptionC5ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x28): undefined reference to `vtable for YAML::RepresentationException'\n"}
+[19.596570] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::InvalidNode::InvalidNode()':\n"}
+[19.597015] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML11InvalidNodeC2Ev[_ZN4YAML11InvalidNodeC5Ev]+0x90): undefined reference to `vtable for YAML::InvalidNode'\n"}
+[19.597435] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML11InvalidNodeC2Ev[_ZN4YAML11InvalidNodeC5Ev]+0x94): undefined reference to `vtable for YAML::InvalidNode'\n"}
+[19.597847] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::BadConversion::BadConversion(YAML::Mark const&)':\n"}
+[19.598270] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML13BadConversionC2ERKNS_4MarkE[_ZN4YAML13BadConversionC5ERKNS_4MarkE]+0x74): undefined reference to `vtable for YAML::BadConversion'\n"}
+[19.598751] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML13BadConversionC2ERKNS_4MarkE[_ZN4YAML13BadConversionC5ERKNS_4MarkE]+0x78): undefined reference to `vtable for YAML::BadConversion'\n"}
+[19.599110] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::BadSubscript::BadSubscript()':\n"}
+[19.599370] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML12BadSubscriptC2Ev[_ZN4YAML12BadSubscriptC5Ev]+0x90): undefined reference to `vtable for YAML::BadSubscript'\n"}
+[19.599617] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML12BadSubscriptC2Ev[_ZN4YAML12BadSubscriptC5Ev]+0x94): undefined reference to `vtable for YAML::BadSubscript'\n"}
+[19.599886] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::memory_holder::create_node()':\n"}
+[19.600135] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail13memory_holder11create_nodeEv[_ZN4YAML6detail13memory_holder11create_nodeEv]+0x14): undefined reference to `YAML::detail::memory::create_node()'\n"}
+[19.600381] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node_ref::mark_defined()':\n"}
+[19.600637] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail8node_ref12mark_definedEv[_ZN4YAML6detail8node_ref12mark_definedEv]+0x14): undefined reference to `YAML::detail::node_data::mark_defined()'\n"}
+[19.600870] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node_ref::set_null()':\n"}
+[19.601097] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail8node_ref8set_nullEv[_ZN4YAML6detail8node_ref8set_nullEv]+0x14): undefined reference to `YAML::detail::node_data::set_null()'\n"}
+[19.601329] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node_ref::set_scalar(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.601561] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail8node_ref10set_scalarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML6detail8node_ref10set_scalarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x1c): undefined reference to `YAML::detail::node_data::set_scalar(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[19.601839] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node_ref::begin()':\n"}
+[19.602079] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail8node_ref5beginEv[_ZN4YAML6detail8node_ref5beginEv]+0x34): undefined reference to `YAML::detail::node_data::begin()'\n"}
+[19.602319] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node_ref::end()':\n"}
+[19.602771] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail8node_ref3endEv[_ZN4YAML6detail8node_ref3endEv]+0x34): undefined reference to `YAML::detail::node_data::end()'\n"}
+[19.603049] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node::EnsureNodeExists() const':\n"}
+[19.603309] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x3c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.603564] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x40): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.603929] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x44): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.604193] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x48): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.604537] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node::Mark() const':\n"}
+[19.604805] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x40): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.605053] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x44): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.605219] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x48): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.605308] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x4c): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.605405] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node::Type() const':\n"}
+[19.605491] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node4TypeEv[_ZNK4YAML4Node4TypeEv]+0x3c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.605579] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4TypeEv[_ZNK4YAML4Node4TypeEv]+0x40): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.605662] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4TypeEv[_ZNK4YAML4Node4TypeEv]+0x44): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.605746] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node4TypeEv[_ZNK4YAML4Node4TypeEv]+0x48): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.605841] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node::Scalar[abi:cxx11]() const':\n"}
+[19.605929] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x3c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.606016] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x40): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.606100] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x44): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.606184] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x48): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.606268] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x74): undefined reference to `YAML::detail::node_data::empty_scalar[abi:cxx11]'\n"}
+[19.606352] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node6ScalarB5cxx11Ev[_ZNK4YAML4Node6ScalarB5cxx11Ev]+0x78): undefined reference to `YAML::detail::node_data::empty_scalar[abi:cxx11]'\n"}
+[19.606439] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `void YAML::Node::Assign<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.606539] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_[_ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_]+0x40): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.606645] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_[_ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_]+0x44): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.606739] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_[_ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_]+0x48): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.606827] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_[_ZN4YAML4Node6AssignINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKT_]+0x4c): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.606923] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `MotorNode::load_devices(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.607011] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN9MotorNode12load_devicesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9MotorNode12load_devicesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x3c): undefined reference to `YAML::LoadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[19.607107] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `MotorNode::load_motors(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[19.607197] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN9MotorNode11load_motorsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9MotorNode11load_motorsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x3c): undefined reference to `YAML::LoadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[19.607285] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [8]>(char const (&) [8])':\n"}
+[19.607371] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML4NodeixIA8_cEES0_RKT_[_ZN4YAML4NodeixIA8_cEES0_RKT_]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.607457] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA8_cEES0_RKT_[_ZN4YAML4NodeixIA8_cEES0_RKT_]+0x5c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.607552] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA8_cEES0_RKT_[_ZN4YAML4NodeixIA8_cEES0_RKT_]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.608272] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA8_cEES0_RKT_[_ZN4YAML4NodeixIA8_cEES0_RKT_]+0x64): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.609607] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node const YAML::Node::operator[]<char [5]>(char const (&) [5]) const':\n"}
+[19.610037] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4NodeixIA5_cEEKS0_RKT_[_ZNK4YAML4NodeixIA5_cEEKS0_RKT_]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.612249] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA5_cEEKS0_RKT_[_ZNK4YAML4NodeixIA5_cEEKS0_RKT_]+0x5c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.614121] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA5_cEEKS0_RKT_[_ZNK4YAML4NodeixIA5_cEEKS0_RKT_]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.614564] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA5_cEEKS0_RKT_[_ZNK4YAML4NodeixIA5_cEEKS0_RKT_]+0x64): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.614877] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > YAML::Node::as<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >() const':\n"}
+[19.615247] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v[_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v]+0x54): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.615605] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v[_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.615949] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v[_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v]+0x5c): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.616437] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v[_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.616741] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [7]>(char const (&) [7])':\n"}
+[19.617064] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML4NodeixIA7_cEES0_RKT_[_ZN4YAML4NodeixIA7_cEES0_RKT_]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.617339] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA7_cEES0_RKT_[_ZN4YAML4NodeixIA7_cEES0_RKT_]+0x5c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.617625] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA7_cEES0_RKT_[_ZN4YAML4NodeixIA7_cEES0_RKT_]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.617907] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML4NodeixIA7_cEES0_RKT_[_ZN4YAML4NodeixIA7_cEES0_RKT_]+0x64): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.618772] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node const YAML::Node::operator[]<char [7]>(char const (&) [7]) const':\n"}
+[19.619243] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4NodeixIA7_cEEKS0_RKT_[_ZNK4YAML4NodeixIA7_cEEKS0_RKT_]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.619781] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA7_cEEKS0_RKT_[_ZNK4YAML4NodeixIA7_cEEKS0_RKT_]+0x5c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.620827] (-) TimerEvent: {}
+[19.621712] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA7_cEEKS0_RKT_[_ZNK4YAML4NodeixIA7_cEEKS0_RKT_]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.623158] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA7_cEEKS0_RKT_[_ZNK4YAML4NodeixIA7_cEEKS0_RKT_]+0x64): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.623480] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::Node const YAML::Node::operator[]<char [12]>(char const (&) [12]) const':\n"}
+[19.624641] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4NodeixIA12_cEEKS0_RKT_[_ZNK4YAML4NodeixIA12_cEEKS0_RKT_]+0x58): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.624897] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA12_cEEKS0_RKT_[_ZNK4YAML4NodeixIA12_cEEKS0_RKT_]+0x5c): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.625182] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA12_cEEKS0_RKT_[_ZNK4YAML4NodeixIA12_cEEKS0_RKT_]+0x60): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.625353] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4NodeixIA12_cEEKS0_RKT_[_ZNK4YAML4NodeixIA12_cEEKS0_RKT_]+0x64): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.625831] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `unsigned char YAML::Node::as<unsigned char>() const':\n"}
+[19.626352] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML4Node2asIhEET_v[_ZNK4YAML4Node2asIhEET_v]+0x50): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.627367] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asIhEET_v[_ZNK4YAML4Node2asIhEET_v]+0x54): undefined reference to `YAML::InvalidNode::~InvalidNode()'\n"}
+[19.628465] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asIhEET_v[_ZNK4YAML4Node2asIhEET_v]+0x58): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.628742] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML4Node2asIhEET_v[_ZNK4YAML4Node2asIhEET_v]+0x5c): undefined reference to `typeinfo for YAML::InvalidNode'\n"}
+[19.629574] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::TypedBadConversion<unsigned char>::~TypedBadConversion()':\n"}
+[19.629865] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML18TypedBadConversionIhED2Ev[_ZN4YAML18TypedBadConversionIhED5Ev]+0x20): undefined reference to `YAML::BadConversion::~BadConversion()'\n"}
+[19.630139] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::get<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::shared_ptr<YAML::detail::memory_holder>)':\n"}
+[19.630550] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0xe0): undefined reference to `YAML::detail::node_data::convert_to_map(std::shared_ptr<YAML::detail::memory_holder>)'\n"}
+[19.631069] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x104): undefined reference to `YAML::BadSubscript::~BadSubscript()'\n"}
+[19.631919] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x108): undefined reference to `YAML::BadSubscript::~BadSubscript()'\n"}
+[19.632154] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x10c): undefined reference to `typeinfo for YAML::BadSubscript'\n"}
+[19.632424] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x110): undefined reference to `typeinfo for YAML::BadSubscript'\n"}
+[19.632582] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x204): undefined reference to `YAML::detail::node_data::insert_map_pair(YAML::detail::node&, YAML::detail::node&)'\n"}
+[19.632987] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node* YAML::detail::node_data::get<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::shared_ptr<YAML::detail::memory_holder>) const':\n"}
+[19.633553] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0xe0): undefined reference to `YAML::BadSubscript::~BadSubscript()'\n"}
+[19.634492] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0xe4): undefined reference to `YAML::BadSubscript::~BadSubscript()'\n"}
+[19.634684] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0xe8): undefined reference to `typeinfo for YAML::BadSubscript'\n"}
+[19.634829] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: motor_node.cpp:(.text._ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZNK4YAML6detail9node_data3getINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0xec): undefined reference to `typeinfo for YAML::BadSubscript'\n"}
+[19.635080] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::convert_to_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::shared_ptr<YAML::detail::memory_holder>)':\n"}
+[19.635580] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML6detail9node_data15convert_to_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data15convert_to_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x60): undefined reference to `YAML::detail::memory_holder::merge(YAML::detail::memory_holder&)'\n"}
+[19.635838] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o: in function `YAML::TypedBadConversion<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::~TypedBadConversion()':\n"}
+[19.636110] (motor_controller) StderrLine: {'line': b"motor_node.cpp:(.text._ZN4YAML18TypedBadConversionINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED2Ev[_ZN4YAML18TypedBadConversionINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED5Ev]+0x20): undefined reference to `YAML::BadConversion::~BadConversion()'\n"}
+[19.636689] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o:(.data.rel.ro._ZTIN4YAML18TypedBadConversionIhEE[_ZTIN4YAML18TypedBadConversionIhEE]+0x10): undefined reference to `typeinfo for YAML::BadConversion'\n"}
+[19.636819] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o:(.data.rel.ro._ZTIN4YAML18TypedBadConversionINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE[_ZTIN4YAML18TypedBadConversionINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE]+0x10): undefined reference to `typeinfo for YAML::BadConversion'\n"}
+[19.636924] (motor_controller) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/motor_node.dir/src/motor_node.cpp.o:(.data.rel.local.DW.ref._ZTIN4YAML9ExceptionE[DW.ref._ZTIN4YAML9ExceptionE]+0x0): undefined reference to `typeinfo for YAML::Exception'\n"}
+[19.637023] (motor_controller) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[19.637116] (motor_controller) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motor_node.dir/build.make:167\xef\xbc\x9amotor_node] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[19.637212] (motor_controller) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78\xef\xbc\x9aCMakeFiles/motor_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[19.637686] (motor_controller) StderrLine: {'line': b'make: *** [Makefile:141\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[19.637820] (motor_controller) CommandEnded: {'returncode': 2}
+[19.638454] (motor_controller) JobEnded: {'identifier': 'motor_controller', 'rc': 2}
+[19.648529] (-) EventReactorShutdown: {}

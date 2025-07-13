@@ -1,0 +1,1 @@
+/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__struct.h

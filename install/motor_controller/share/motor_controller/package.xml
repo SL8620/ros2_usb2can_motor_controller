@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>motor_controller</name>
+  <version>0.0.1</version>
+  <description>Motor control node using CAN-USB interface and YAML configuration.</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <!-- 构建工具依赖 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 构建依赖 -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>motor_interfaces</build_depend>
+  <build_depend>can_usb_driver</build_depend>
+  <build_depend>yaml-cpp</build_depend>
+
+  <!-- 运行依赖 -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>motor_interfaces</exec_depend>
+  <exec_depend>can_usb_driver</exec_depend>
+  <exec_depend>yaml-cpp</exec_depend>
+
+  <!-- 导出构建类型 -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

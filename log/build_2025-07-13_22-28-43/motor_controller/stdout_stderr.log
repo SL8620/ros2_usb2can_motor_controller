@@ -1,0 +1,65 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Found motor_interfaces: 0.1.0 (/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake)
+-- Found can_usb_driver: 0.1.0 (/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller
+[35m[1mScanning dependencies of target motor_node[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/rs03_motor_parser.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/math_ops.cpp.o[0m
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_control(motor_interfaces::msg::MotorControl_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:275:40:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmotor_interfaces::msg::MotorControl_<std::allocator<void> >::_device_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  275 |         std::string key = get_key([01;31m[Kmsg->device[m[K, msg->channel, msg->id);
+      |                                   [01;31m[K~~~~~^~~~~~[m[K
+      |                                        [01;31m[K|[m[K
+      |                                        [01;31m[Kmotor_interfaces::msg::MotorControl_<std::allocator<void> >::_device_type {aka unsigned char}[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:89:44:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::string MotorNode::get_key(const string&, uint8_t, uint8_t) const[m[K’
+   89 |     std::string get_key([01;36m[Kconst std::string& device[m[K, uint8_t channel, uint8_t id) const {
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_command(motor_interfaces::msg::MotorCommand_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:308:40:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmotor_interfaces::msg::MotorCommand_<std::allocator<void> >::_device_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  308 |         std::string key = get_key([01;31m[Kmsg->device[m[K, msg->channel, msg->id);
+      |                                   [01;31m[K~~~~~^~~~~~[m[K
+      |                                        [01;31m[K|[m[K
+      |                                        [01;31m[Kmotor_interfaces::msg::MotorCommand_<std::allocator<void> >::_device_type {aka unsigned char}[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:89:44:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::string MotorNode::get_key(const string&, uint8_t, uint8_t) const[m[K’
+   89 |     std::string get_key([01;36m[Kconst std::string& device[m[K, uint8_t channel, uint8_t id) const {
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/motor_node.dir/build.make:63：CMakeFiles/motor_node.dir/src/motor_node.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/motor_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2
