@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/rosidl_generator_py/motor_interfaces/libmotor_interfaces__python.so" "TARGETS" "motor_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

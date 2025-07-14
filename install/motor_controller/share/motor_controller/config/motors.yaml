@@ -1,5 +1,5 @@
 motors:
-  - name: "motor_0"
+  - name: "test_000"
     type: "RS03"
     device: "usb2can_0"
     can_channel: 1

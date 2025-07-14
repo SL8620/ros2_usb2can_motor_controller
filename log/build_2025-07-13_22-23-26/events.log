@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000322] (-) JobUnselected: {'identifier': 'can_usb_driver'}
-[0.000457] (-) JobUnselected: {'identifier': 'motor_controller'}
-[0.000559] (-) JobUnselected: {'identifier': 'motor_interfaces'}
-[0.000681] (-) EventReactorShutdown: {}

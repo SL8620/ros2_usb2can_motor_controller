@@ -1,1 +1,6 @@
-/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/motor_interfaces
+msg/MotorCommand.idl
+msg/MotorCommand.msg
+msg/MotorControl.idl
+msg/MotorControl.msg
+msg/MotorStatus.idl
+msg/MotorStatus.msg

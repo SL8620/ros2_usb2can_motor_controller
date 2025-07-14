@@ -75,7 +75,7 @@ private:
         std::string name;       // 电机名称（如"leg_motor1"）
         std::string type;       // 电机类型（如"RS03"）
         std::string device;     // 所属CAN设备名称
-        uint8_t channel;        // CAN通道号（如CAN1, CAN2）
+        uint8_t channel;        // CAN通道号（1，2）
         uint8_t id;             // CAN节点ID
     };
 
@@ -169,14 +169,16 @@ private:
             for (const auto& item : config["motors"]) 
             {
                 MotorInfo info;
-                info.name = item["name"].as<std::string>();          // 电机名称
-                info.type = item["type"].as<std::string>();          // 电机型号
-                info.device = item["device"].as<std::string>();      // 所属设备
-                info.channel = item["can_channel"].as<uint8_t>();    // CAN通道
-                info.id = item["can_id"].as<uint8_t>();              // CAN ID
+                info.name       = item["name"].as<std::string>();          // 电机名称
+                info.type       = item["type"].as<std::string>();          // 电机型号
+                info.device     = item["device"].as<std::string>();      // 所属设备
+                info.channel    = static_cast<uint8_t>(std::stoi(item["can_channel"].as<std::string>()));
+                info.id         = static_cast<uint8_t>(std::stoi(item["can_id"].as<std::string>()));
+                // info.channel = item["can_channel"].as<uint8_t>();    // CAN通道
+                // info.id = item["can_id"].as<uint8_t>();              // CAN ID
+                RCLCPP_INFO(get_logger(), "Parsed motor %s: channel = %d, id = %d", info.name.c_str(), info.channel, info.id);
 
                 // 检查CAN通道合法性（1或2）
-                info.channel = item["can_channel"].as<uint8_t>();
                 if (info.channel < MIN_CAN_CHANNEL || info.channel > MAX_CAN_CHANNEL) 
                 {
                     RCLCPP_FATAL(get_logger(), "FATAL: Motor %s has invalid CAN channel %d (must be %d or %d)", info.name.c_str(), info.channel, MIN_CAN_CHANNEL, MAX_CAN_CHANNEL);

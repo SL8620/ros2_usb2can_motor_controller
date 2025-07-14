@@ -1,1 +1,1 @@
-rclcpp;std_msgs;motor_interfaces;can_usb_driver;yaml-cpp
+rclcpp;std_msgs;motor_interfaces;can_usb_driver;yaml-cpp;launch;launch_ros

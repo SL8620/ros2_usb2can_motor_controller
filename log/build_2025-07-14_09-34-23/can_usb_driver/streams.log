@@ -1,0 +1,63 @@
+[0.030s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver
+[0.212s] -- The C compiler identification is GNU 9.4.0
+[0.366s] -- The CXX compiler identification is GNU 9.4.0
+[0.378s] -- Check for working C compiler: /usr/bin/cc
+[0.486s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.488s] -- Detecting C compiler ABI info
+[0.600s] -- Detecting C compiler ABI info - done
+[0.627s] -- Detecting C compile features
+[0.628s] -- Detecting C compile features - done
+[0.634s] -- Check for working CXX compiler: /usr/bin/c++
+[0.755s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.757s] -- Detecting CXX compiler ABI info
+[0.878s] -- Detecting CXX compiler ABI info - done
+[0.893s] -- Detecting CXX compile features
+[0.893s] -- Detecting CXX compile features - done
+[0.897s] -- Looking for pthread.h
+[1.012s] -- Looking for pthread.h - found
+[1.012s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.124s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.124s] -- Looking for pthread_create in pthreads
+[1.218s] -- Looking for pthread_create in pthreads - not found
+[1.219s] -- Looking for pthread_create in pthread
+[1.329s] -- Looking for pthread_create in pthread - found
+[1.330s] -- Found Threads: TRUE  
+[1.333s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.368s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.369s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.768s] -- Configuring done
+[1.773s] -- Generating done
+[1.777s] -- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver
+[1.786s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver
+[1.790s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12
+[1.852s] [35m[1mScanning dependencies of target can_usb_driver[0m
+[1.870s] [ 50%] [32mBuilding CXX object CMakeFiles/can_usb_driver.dir/src/can_usb_device.cpp.o[0m
+[2.905s] [100%] [32m[1mLinking CXX static library libcan_usb_driver.a[0m
+[2.963s] [100%] Built target can_usb_driver
+[2.983s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12
+[3.006s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver
+[3.020s] -- Install configuration: ""
+[3.020s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/libcan_usb_driver.a
+[3.021s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include
+[3.021s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include/can_usb_driver
+[3.021s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/include/can_usb_driver/can_usb_device.hpp
+[3.021s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/package_run_dependencies/can_usb_driver
+[3.022s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/parent_prefix_path/can_usb_driver
+[3.022s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/ament_prefix_path.sh
+[3.022s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/ament_prefix_path.dsv
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/path.sh
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/environment/path.dsv
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.bash
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.sh
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.zsh
+[3.023s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/local_setup.dsv
+[3.024s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.dsv
+[3.024s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/ament_index/resource_index/packages/can_usb_driver
+[3.024s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/export_can_usb_driverExport.cmake
+[3.024s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/export_can_usb_driverExport-noconfig.cmake
+[3.025s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.025s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/ament_cmake_export_targets-extras.cmake
+[3.025s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/can_usb_driverConfig.cmake
+[3.025s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/cmake/can_usb_driverConfig-version.cmake
+[3.026s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.xml
+[3.030s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver

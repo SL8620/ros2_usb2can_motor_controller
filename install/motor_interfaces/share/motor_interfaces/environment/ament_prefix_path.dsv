@@ -1,1 +1,1 @@
-/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv
+prepend-non-duplicate;AMENT_PREFIX_PATH;

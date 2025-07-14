@@ -5,7 +5,7 @@ set(motor_controller_BUILD_DEPENDS "rclcpp" "std_msgs" "motor_interfaces" "can_u
 set(motor_controller_BUILDTOOL_DEPENDS "ament_cmake")
 set(motor_controller_BUILD_EXPORT_DEPENDS )
 set(motor_controller_BUILDTOOL_EXPORT_DEPENDS )
-set(motor_controller_EXEC_DEPENDS "rclcpp" "std_msgs" "motor_interfaces" "can_usb_driver" "yaml-cpp")
+set(motor_controller_EXEC_DEPENDS "rclcpp" "std_msgs" "motor_interfaces" "can_usb_driver" "yaml-cpp" "launch" "launch_ros")
 set(motor_controller_TEST_DEPENDS )
 set(motor_controller_GROUP_DEPENDS )
 set(motor_controller_MEMBER_OF_GROUPS )

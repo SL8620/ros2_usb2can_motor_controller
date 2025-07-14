@@ -1,1 +1,24 @@
-/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/rosidl_adapter/motor_interfaces/msg/MotorCommand.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from motor_interfaces/msg/MotorCommand.msg
+// generated code does not contain a copyright notice
+
+
+module motor_interfaces {
+  module msg {
+    struct MotorCommand {
+      string device;
+
+      uint8 channel;
+
+      uint8 id;
+
+      @verbatim (language="comment", text=
+        " 0: enable, 1: disable, 2: zeroing, 3: set mode ...")
+      uint8 command_type;
+
+      @verbatim (language="comment", text=
+        " 仅当 command_type = 3 时使用，0: position, 1: velocity 等")
+      uint8 mode_type;
+    };
+  };
+};

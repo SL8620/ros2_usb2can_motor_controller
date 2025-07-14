@@ -1,6 +1,6 @@
 devices:
-  - name: ttyacm0
-    path: /dev/ttyACM0
+  - name: "usb2can_0"
+    path: "/dev/usb2can_0"
     
   # - path: /dev/ttyACM1
   #   name: ttyacm1

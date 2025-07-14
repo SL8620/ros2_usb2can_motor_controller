@@ -1,1 +1,6 @@
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces/msg/MotorStatus.msg
+string device
+uint8 channel
+uint8 id
+float32 current_position
+float32 current_velocity
+float32 current_torque

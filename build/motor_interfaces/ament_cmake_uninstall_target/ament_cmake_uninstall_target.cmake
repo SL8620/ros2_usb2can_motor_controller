@@ -55,6 +55,3 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
-
-# uninstall files installed using the symlink install functions
-include("/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

@@ -1,1 +1,4 @@
-/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/ament_cmake_environment_hooks/local_setup.dsv
+source;share/motor_interfaces/environment/ament_prefix_path.sh
+source;share/motor_interfaces/environment/library_path.sh
+source;share/motor_interfaces/environment/path.sh
+source;share/motor_interfaces/environment/pythonpath.sh

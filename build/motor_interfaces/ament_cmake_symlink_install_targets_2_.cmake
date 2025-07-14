@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" "TARGETS" "motor_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.8/site-packages/motor_interfaces")

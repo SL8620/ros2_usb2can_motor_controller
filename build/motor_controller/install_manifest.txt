@@ -5,6 +5,7 @@
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/math_ops.hpp
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/devices.yaml
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/motors.yaml
+/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch/motor_node.launch.py
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/package_run_dependencies/motor_controller
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/parent_prefix_path/motor_controller
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.sh

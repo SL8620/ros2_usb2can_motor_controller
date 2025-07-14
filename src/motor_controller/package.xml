@@ -23,6 +23,9 @@
   <exec_depend>motor_interfaces</exec_depend>
   <exec_depend>can_usb_driver</exec_depend>
   <exec_depend>yaml-cpp</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
 
   <!-- 导出构建类型 -->
   <export>

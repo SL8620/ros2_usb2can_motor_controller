@@ -186,10 +186,6 @@ motor_interfaces/msg/detail/motor_status__type_support.hpp
 
 /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/include/motor_controller/math_ops.hpp
-math.h
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/include/motor_controller/math.h
-
 /home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/include/motor_controller/motor_parser_base.hpp
 vector
 -
@@ -233,14 +229,6 @@ motor_controller/motor_parser_base.hpp
 /home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_controller/motor_parser_base.hpp
 motor_controller/rs03_motor_parser.hpp
 /home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_controller/rs03_motor_parser.hpp
-
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/rs03_motor_parser.cpp
-motor_controller/rs03_motor_parser.hpp
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_controller/rs03_motor_parser.hpp
-motor_controller/math_ops.hpp
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_controller/math_ops.hpp
-can_usb_driver/can_usb_device.hpp
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/can_usb_driver/can_usb_device.hpp
 
 /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
 builtin_interfaces/msg/detail/duration__struct.hpp

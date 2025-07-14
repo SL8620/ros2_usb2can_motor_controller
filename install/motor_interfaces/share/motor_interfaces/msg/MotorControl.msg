@@ -1,1 +1,8 @@
-/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces/msg/MotorControl.msg
+string device
+uint8 channel
+uint8 id
+float32 position
+float32 velocity
+float32 torque
+float32 kp
+float32 kd
