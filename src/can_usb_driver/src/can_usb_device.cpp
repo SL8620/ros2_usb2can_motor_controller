@@ -9,6 +9,8 @@
 #include <thread>
 #include <algorithm>
 
+#include "rclcpp/rclcpp.hpp"    // ROS 2核心功能
+
 using namespace can_usb_driver;
 
 std::mutex CanUsbDevice::coutMutex_;
@@ -42,16 +44,25 @@ CanUsbDevice::~CanUsbDevice()
 bool CanUsbDevice::open() 
 {
     fd_ = ::open(devicePath_.c_str(), O_RDWR | O_NOCTTY | O_SYNC);
+    // if (fd_ < 0) 
+    // {
+    //     std::cerr << "Failed to open " << devicePath_ << "\n";
+    //     return false;
+    // }
     if (fd_ < 0) 
     {
-        std::cerr << "Failed to open " << devicePath_ << "\n";
-        return false;
+        RCLCPP_ERROR(rclcpp::get_logger("can_usb_device"), "Failed to open %s: %s", devicePath_.c_str(), strerror(errno));
+    } 
+    else 
+    {
+        RCLCPP_INFO(rclcpp::get_logger("can_usb_device"), "Successfully opened %s (fd=%d)", devicePath_.c_str(), fd_);
     }
 
     termios tty{};
     if (tcgetattr(fd_, &tty) != 0) 
     {
-        std::cerr << "Failed to get termios\n";
+        RCLCPP_INFO(rclcpp::get_logger("can_usb_device"), "Failed to get termios\n");
+        // std::cerr << "Failed to get termios\n";
         return false;
     }
 
@@ -95,7 +106,14 @@ void CanUsbDevice::setReceiveCallback(CanMessageCallback cb)
 bool CanUsbDevice::sendCanMessage(const CanMessage& msg) 
 {
     std::lock_guard<std::mutex> lock(ioMutex_);
-    if (fd_ < 0) return false;
+    if (fd_ < 0) {
+        RCLCPP_ERROR(rclcpp::get_logger("can_usb_device"), "CAN device not open!");
+        return false;
+    }
+
+      // 打印发送的原始数据
+    // RCLCPP_DEBUG(logger_, "Sending CAN message: port=%d, id=%d, data=[%s]", 
+    //              msg.canPort, msg.id, bytesToHex(msg.data).c_str());
 
     std::vector<uint8_t> buf;
     buf.push_back(0xB0 | msg.canPort);
@@ -144,6 +162,7 @@ void CanUsbDevice::receiveLoop()
             ssize_t n = read(fd_, temp, sizeof(temp));
             if (n > 0) 
             {
+                RCLCPP_DEBUG(rclcpp::get_logger("can_usb_device"), "Received raw data");
                 buffer.insert(buffer.end(), temp, temp + n);
                 CanMessage msg;
                 while (parseBuffer(buffer, msg)) 

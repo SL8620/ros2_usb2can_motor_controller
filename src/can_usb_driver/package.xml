@@ -7,8 +7,9 @@
   <maintainer email="your_email@example.com">Your Name</maintainer>
   <license>MIT</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
 
+  <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>rclcpp</build_depend>
   <build_export_depend>rclcpp</build_export_depend>
   <exec_depend>rclcpp</exec_depend>

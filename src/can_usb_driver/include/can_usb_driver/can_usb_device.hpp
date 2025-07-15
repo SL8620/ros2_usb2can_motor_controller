@@ -1,4 +1,5 @@
 #pragma once
+
 #include <thread>
 #include <atomic>
 #include <vector>
@@ -33,6 +34,7 @@ namespace can_usb_driver{
     public:
         std::string devName_;
         static std::mutex coutMutex_;
+        
         CanUsbDevice(const std::string& devicePath = "", const std::string& devName_= "");
         ~CanUsbDevice();
 

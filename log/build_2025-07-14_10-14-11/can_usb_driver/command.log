@@ -1,4 +1,0 @@
-Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12
-Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12
-Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver
-Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver

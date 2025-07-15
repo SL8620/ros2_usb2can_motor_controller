@@ -1,0 +1,133 @@
+[0.029s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver
+[0.059s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.091s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.371s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.415s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.417s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.583s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.645s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.647s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.915s] -- Configuring done
+[0.924s] -- Generating done
+[0.928s] -- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver
+[0.943s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver
+[0.950s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12
+[1.013s] [35m[1mScanning dependencies of target can_usb_driver[0m
+[1.065s] [ 50%] [32mBuilding CXX object CMakeFiles/can_usb_driver.dir/src/can_usb_device.cpp.o[0m
+[3.093s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[3.093s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[3.094s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.094s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.094s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.094s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.095s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.095s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.095s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.095s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.096s]                  from [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:12[m[K:
+[3.096s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:[m[K In member function ‘[01m[Kbool can_usb_driver::CanUsbDevice::open()[m[K’:
+[3.096s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:54:22:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[3.096s]    54 |         RCLCPP_ERROR([01;31m[Klogger_[m[K, "Failed to open %s: %s", devicePath_.c_str(), strerror(errno));
+[3.097s]       |                      [01;31m[K^~~~~~~[m[K
+[3.097s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:54:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.097s]    54 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to open %s: %s", devicePath_.c_str(), strerror(errno));
+[3.098s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.098s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:54:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.098s]    54 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to open %s: %s", devicePath_.c_str(), strerror(errno));
+[3.098s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.099s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:54:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.099s]    54 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to open %s: %s", devicePath_.c_str(), strerror(errno));
+[3.099s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.099s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:58:21:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[3.100s]    58 |         RCLCPP_INFO([01;31m[Klogger_[m[K, "Successfully opened %s (fd=%d)", devicePath_.c_str(), fd_);
+[3.100s]       |                     [01;31m[K^~~~~~~[m[K
+[3.100s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:58:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.100s]    58 |         [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully opened %s (fd=%d)", devicePath_.c_str(), fd_);
+[3.100s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[3.101s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:58:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.101s]    58 |         [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully opened %s (fd=%d)", devicePath_.c_str(), fd_);
+[3.101s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[3.101s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:58:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.102s]    58 |         [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully opened %s (fd=%d)", devicePath_.c_str(), fd_);
+[3.102s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[3.104s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:[m[K In member function ‘[01m[Kbool can_usb_driver::CanUsbDevice::sendCanMessage(const can_usb_driver::CanMessage&)[m[K’:
+[3.104s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:109:22:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[3.104s]   109 |         RCLCPP_ERROR([01;31m[Klogger_[m[K, "CAN device not open!");
+[3.105s]       |                      [01;31m[K^~~~~~~[m[K
+[3.105s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:109:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.105s]   109 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "CAN device not open!");
+[3.105s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.106s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:109:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.106s]   109 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "CAN device not open!");
+[3.106s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.106s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:109:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.106s]   109 |         [01;31m[KRCLCPP_ERROR[m[K(logger_, "CAN device not open!");
+[3.107s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.108s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:114:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[3.108s]   114 |     RCLCPP_DEBUG([01;31m[Klogger_[m[K, "Sending CAN message: port=%d, id=%d, data=[%s]",
+[3.108s]       |                  [01;31m[K^~~~~~~[m[K
+[3.108s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:114:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.109s]   114 |     [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Sending CAN message: port=%d, id=%d, data=[%s]",
+[3.109s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[3.109s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:114:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.109s]   114 |     [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Sending CAN message: port=%d, id=%d, data=[%s]",
+[3.110s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[3.110s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:114:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.110s]   114 |     [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Sending CAN message: port=%d, id=%d, data=[%s]",
+[3.110s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[3.112s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[3.113s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[3.113s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.113s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.113s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.114s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.114s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.114s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.114s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.115s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.115s]                  from [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:12[m[K:
+[3.115s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:115:39:[m[K [01;31m[Kerror: [m[K‘[01m[KbytesToHex[m[K’ was not declared in this scope
+[3.116s]   115 |                  msg.canPort, msg.id, [01;31m[KbytesToHex[m[K(msg.data).c_str());
+[3.116s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[3.119s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[3.119s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[3.120s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.120s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.120s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.120s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.121s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.121s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.121s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.121s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.121s]                  from [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:12[m[K:
+[3.122s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:[m[K In member function ‘[01m[Kvoid can_usb_driver::CanUsbDevice::receiveLoop()[m[K’:
+[3.122s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[3.122s]   164 |                 RCLCPP_DEBUG([01;31m[Klogger_[m[K, "Received raw data: %s", bytesToHex(temp, n).c_str());
+[3.122s]       |                              [01;31m[K^~~~~~~[m[K
+[3.123s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:164:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.123s]   164 |                 [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Received raw data: %s", bytesToHex(temp, n).c_str());
+[3.123s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[3.123s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:164:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.124s]   164 |                 [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Received raw data: %s", bytesToHex(temp, n).c_str());
+[3.124s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[3.124s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:164:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.124s]   164 |                 [01;31m[KRCLCPP_DEBUG[m[K(logger_, "Received raw data: %s", bytesToHex(temp, n).c_str());
+[3.124s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[3.125s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[3.125s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[3.125s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.125s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.125s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.126s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.126s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.126s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.126s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.126s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.127s]                  from [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:12[m[K:
+[3.127s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/src/can_usb_device.cpp:164:64:[m[K [01;31m[Kerror: [m[K‘[01m[KbytesToHex[m[K’ was not declared in this scope
+[3.127s]   164 |                 RCLCPP_DEBUG(logger_, "Received raw data: %s", [01;31m[KbytesToHex[m[K(temp, n).c_str());
+[3.127s]       |                                                                [01;31m[K^~~~~~~~~~[m[K
+[3.817s] make[2]: *** [CMakeFiles/can_usb_driver.dir/build.make:63：CMakeFiles/can_usb_driver.dir/src/can_usb_device.cpp.o] 错误 1
+[3.817s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/can_usb_driver.dir/all] 错误 2
+[3.817s] make: *** [Makefile:141：all] 错误 2
+[3.822s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j12 -l12

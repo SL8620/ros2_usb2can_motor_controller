@@ -55,7 +55,7 @@ add_library(can_usb_driver::can_usb_driver STATIC IMPORTED)
 
 set_target_properties(can_usb_driver::can_usb_driver PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Threads::Threads>"
+  INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;Threads::Threads"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

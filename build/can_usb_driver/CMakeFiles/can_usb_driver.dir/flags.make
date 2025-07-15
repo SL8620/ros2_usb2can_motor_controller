@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  
 
-CXX_DEFINES = 
+CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/include 
+CXX_INCLUDES = -I/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver/include -isystem /opt/ros/foxy/include 
 

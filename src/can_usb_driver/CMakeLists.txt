@@ -3,13 +3,25 @@ project(can_usb_driver)
 
 find_package(Threads REQUIRED)
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+
+include_directories(
+  include
+  ${rclcpp_INCLUDE_DIRS}
+)
 
 add_library(can_usb_driver
   src/can_usb_device.cpp
 )
 
-target_link_libraries(can_usb_driver PRIVATE
-    Threads::Threads
+# 使用 ament_target_dependencies 自动链接依赖项
+ament_target_dependencies(can_usb_driver
+  rclcpp
+)
+
+# 使用非关键字模式（plain signature）以避免冲突
+target_link_libraries(can_usb_driver
+  Threads::Threads
 )
 
 target_include_directories(can_usb_driver PUBLIC

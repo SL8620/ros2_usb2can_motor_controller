@@ -124,6 +124,12 @@ private:
                 // 创建设备实例
                 auto device = std::make_shared<can_usb_driver::CanUsbDevice>(dev_path, name);
                 
+                if (!device->open()) 
+                {
+                    RCLCPP_ERROR(get_logger(), "Failed to open device %s at %s", name.c_str(), dev_path.c_str());
+                    continue;  // 跳过失败设备
+                }       
+
                 // 设置数据回调函数（收到CAN数据时触发）
                 // device->setReceiveCallback(
                 //     [this](const can_usb_driver::CanUsbDevice* dev, const can_usb_driver::CanMessage& msg) {this->handle_can_message(dev, msg);
@@ -172,10 +178,8 @@ private:
                 info.name       = item["name"].as<std::string>();          // 电机名称
                 info.type       = item["type"].as<std::string>();          // 电机型号
                 info.device     = item["device"].as<std::string>();      // 所属设备
-                info.channel    = static_cast<uint8_t>(std::stoi(item["can_channel"].as<std::string>()));
-                info.id         = static_cast<uint8_t>(std::stoi(item["can_id"].as<std::string>()));
-                // info.channel = item["can_channel"].as<uint8_t>();    // CAN通道
-                // info.id = item["can_id"].as<uint8_t>();              // CAN ID
+                info.channel    = item["can_channel"].as<int>();
+                info.id         = item["can_id"].as<int>();              // CAN ID
                 RCLCPP_INFO(get_logger(), "Parsed motor %s: channel = %d, id = %d", info.name.c_str(), info.channel, info.id);
 
                 // 检查CAN通道合法性（1或2）
@@ -187,7 +191,6 @@ private:
                 }
 
                 // 检查CAN ID合法性（1-127）
-                info.id = item["can_id"].as<uint8_t>();
                 if (info.id < MIN_CAN_ID || info.id > MAX_CAN_ID) 
                 {
                     RCLCPP_FATAL(get_logger(), "FATAL: Motor %s has invalid CAN ID %d (must be %d-%d)", info.name.c_str(), info.id, MIN_CAN_ID, MAX_CAN_ID);
@@ -206,6 +209,7 @@ private:
                 // 生成唯一键并存储配置
                 std::string key = get_key(info.device, info.channel, info.id);
                 motor_map_[key] = info;
+                RCLCPP_INFO(get_logger(), "Loaded motor key: %s", key.c_str());
 
                 // 为每种电机类型创建协议解析器（单例）
                 if (parser_map_.count(info.name) == 0) 

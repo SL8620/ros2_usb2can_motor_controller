@@ -109,13 +109,14 @@ motor_node: CMakeFiles/motor_node.dir/src/motor_node.cpp.o
 motor_node: CMakeFiles/motor_node.dir/src/math_ops.cpp.o
 motor_node: CMakeFiles/motor_node.dir/src/rs03_motor_parser.cpp.o
 motor_node: CMakeFiles/motor_node.dir/build.make
-motor_node: /opt/ros/foxy/lib/librclcpp.so
 motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so
 motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so
 motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so
 motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so
 motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/libcan_usb_driver.a
 motor_node: /usr/lib/aarch64-linux-gnu/libyaml-cpp.so.0.6.2
+motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so
+motor_node: /opt/ros/foxy/lib/librclcpp.so
 motor_node: /opt/ros/foxy/lib/liblibstatistics_collector.so
 motor_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 motor_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
@@ -153,16 +154,15 @@ motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspe
 motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-motor_node: /opt/ros/foxy/lib/libtracetools.so
-motor_node: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so
 motor_node: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
 motor_node: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
+motor_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 motor_node: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
 motor_node: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 motor_node: /opt/ros/foxy/lib/librcpputils.so
 motor_node: /opt/ros/foxy/lib/librosidl_runtime_c.so
 motor_node: /opt/ros/foxy/lib/librcutils.so
+motor_node: /opt/ros/foxy/lib/libtracetools.so
 motor_node: CMakeFiles/motor_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable motor_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_node.dir/link.txt --verbose=$(VERBOSE)

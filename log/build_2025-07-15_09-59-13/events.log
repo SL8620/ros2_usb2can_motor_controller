@@ -1,0 +1,245 @@
+[0.000000] (-) TimerEvent: {}
+[0.000407] (can_usb_driver) JobQueued: {'identifier': 'can_usb_driver', 'dependencies': OrderedDict()}
+[0.000634] (motor_interfaces) JobQueued: {'identifier': 'motor_interfaces', 'dependencies': OrderedDict()}
+[0.000781] (motor_controller) JobQueued: {'identifier': 'motor_controller', 'dependencies': OrderedDict([('can_usb_driver', '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver'), ('motor_interfaces', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces')])}
+[0.001128] (can_usb_driver) JobStarted: {'identifier': 'can_usb_driver'}
+[0.013474] (motor_interfaces) JobStarted: {'identifier': 'motor_interfaces'}
+[0.025722] (can_usb_driver) JobProgress: {'identifier': 'can_usb_driver', 'progress': 'cmake'}
+[0.026825] (can_usb_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver', '-DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1816'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1462'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3812'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45762'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1877,unix/nvidia-desktop:/tmp/.ICE-unix/1877'), ('INVOCATION_ID', '92ac9b7f62884abfb2729bfc4a56c0cc'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy')]), 'shell': False}
+[0.035842] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'cmake'}
+[0.036638] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1816'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1462'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3812'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45762'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1877,unix/nvidia-desktop:/tmp/.ICE-unix/1877'), ('INVOCATION_ID', '92ac9b7f62884abfb2729bfc4a56c0cc'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy')]), 'shell': False}
+[0.099463] (-) TimerEvent: {}
+[0.141149] (motor_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.141874] (can_usb_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.199607] (-) TimerEvent: {}
+[0.218782] (motor_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.221260] (can_usb_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.227091] (motor_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.228768] (can_usb_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.299772] (-) TimerEvent: {}
+[0.336988] (can_usb_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.337948] (motor_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.338651] (can_usb_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.339009] (motor_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399933] (-) TimerEvent: {}
+[0.444658] (motor_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.448248] (can_usb_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.474720] (motor_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.475658] (motor_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.476886] (can_usb_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.477549] (can_usb_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.481150] (motor_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.482657] (can_usb_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.500082] (-) TimerEvent: {}
+[0.598648] (motor_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.599239] (can_usb_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.600148] (-) TimerEvent: {}
+[0.600783] (motor_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.601205] (can_usb_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.700336] (-) TimerEvent: {}
+[0.724122] (motor_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.724888] (can_usb_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.753151] (can_usb_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.754060] (can_usb_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.757196] (motor_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.757372] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.758373] (motor_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.762197] (motor_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.764162] (motor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)\n'}
+[0.800496] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.801064] (-) TimerEvent: {}
+[0.801918] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.873797] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.874255] (can_usb_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.901200] (-) TimerEvent: {}
+[0.984710] (can_usb_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[0.985122] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.001287] (-) TimerEvent: {}
+[1.062639] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.072671] (motor_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.085389] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.085946] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.101429] (-) TimerEvent: {}
+[1.192253] (can_usb_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.193325] (can_usb_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.196678] (can_usb_driver) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.201489] (-) TimerEvent: {}
+[1.243866] (can_usb_driver) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.244327] (can_usb_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.252760] (motor_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.292848] (motor_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.301580] (-) TimerEvent: {}
+[1.399573] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.401688] (-) TimerEvent: {}
+[1.465953] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.501866] (-) TimerEvent: {}
+[1.526665] (can_usb_driver) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.579735] (can_usb_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.586952] (can_usb_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.601959] (-) TimerEvent: {}
+[1.672733] (motor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.702127] (-) TimerEvent: {}
+[1.709644] (can_usb_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.747880] (can_usb_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.802305] (-) TimerEvent: {}
+[1.820153] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.831863] (motor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.855473] (can_usb_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.865517] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.867340] (motor_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.902448] (-) TimerEvent: {}
+[1.906734] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.907115] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.907232] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.907330] (motor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[1.925895] (can_usb_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.928028] (can_usb_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.938952] (motor_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.002614] (-) TimerEvent: {}
+[2.013525] (motor_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.058781] (motor_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[2.073060] (motor_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces\n'}
+[2.087336] (motor_interfaces) CommandEnded: {'returncode': 0}
+[2.089249] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'build'}
+[2.090879] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'nvidia'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1816'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/nvidia'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1462'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3812'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'nvidia'), ('JOURNAL_STREAM', '8:45762'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nvidia-desktop:@/tmp/.ICE-unix/1877,unix/nvidia-desktop:/tmp/.ICE-unix/1877'), ('INVOCATION_ID', '92ac9b7f62884abfb2729bfc4a56c0cc'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-afc11f763d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy')]), 'shell': False}
+[2.102726] (-) TimerEvent: {}
+[2.118956] (can_usb_driver) StderrLine: {'line': b'CMake Error at CMakeLists.txt:21 (target_link_libraries):\n'}
+[2.119400] (can_usb_driver) StderrLine: {'line': b'  The plain signature for target_link_libraries has already been used with\n'}
+[2.119514] (can_usb_driver) StderrLine: {'line': b'  the target "can_usb_driver".  All uses of target_link_libraries with a\n'}
+[2.119712] (can_usb_driver) StderrLine: {'line': b'  target must be either all-keyword or all-plain.\n'}
+[2.119835] (can_usb_driver) StderrLine: {'line': b'\n'}
+[2.119928] (can_usb_driver) StderrLine: {'line': b'  The uses of the plain signature are here:\n'}
+[2.120069] (can_usb_driver) StderrLine: {'line': b'\n'}
+[2.120156] (can_usb_driver) StderrLine: {'line': b'   * /opt/ros/foxy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:145 (target_link_libraries)\n'}
+[2.120423] (can_usb_driver) StderrLine: {'line': b'\n'}
+[2.120537] (can_usb_driver) StderrLine: {'line': b'\n'}
+[2.120637] (can_usb_driver) StderrLine: {'line': b'\n'}
+[2.159587] (motor_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.160043] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__cpp\x1b[0m\n'}
+[2.176566] (motor_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.202833] (-) TimerEvent: {}
+[2.214253] (can_usb_driver) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.214828] (can_usb_driver) StdoutLine: {'line': b'See also "/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver/CMakeFiles/CMakeOutput.log".\n'}
+[2.215110] (can_usb_driver) StdoutLine: {'line': b'See also "/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver/CMakeFiles/CMakeError.log".\n'}
+[2.237889] (can_usb_driver) CommandEnded: {'returncode': 1}
+[2.279439] (can_usb_driver) JobEnded: {'identifier': 'can_usb_driver', 'rc': 1}
+[2.303025] (-) TimerEvent: {}
+[2.403682] (-) TimerEvent: {}
+[2.504327] (-) TimerEvent: {}
+[2.605088] (-) TimerEvent: {}
+[2.663322] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_generator_c\x1b[0m\n'}
+[2.678894] (motor_interfaces) StdoutLine: {'line': b'[  4%] Built target motor_interfaces__cpp\n'}
+[2.682436] (motor_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__functions.c.o\x1b[0m\n'}
+[2.682755] (motor_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c.o\x1b[0m\n'}
+[2.682882] (motor_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_status__functions.c.o\x1b[0m\n'}
+[2.695657] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.696081] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.696352] (motor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.705207] (-) TimerEvent: {}
+[2.762322] (motor_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmotor_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[2.805308] (-) TimerEvent: {}
+[2.811646] (motor_interfaces) StdoutLine: {'line': b'[ 19%] Built target motor_interfaces__rosidl_generator_c\n'}
+[2.827954] (motor_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.828503] (motor_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.905513] (-) TimerEvent: {}
+[3.006255] (-) TimerEvent: {}
+[3.087094] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[3.106428] (-) TimerEvent: {}
+[3.107111] (motor_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[3.107654] (motor_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_status__type_support.cpp.o\x1b[0m\n'}
+[3.107912] (motor_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_control__type_support.cpp.o\x1b[0m\n'}
+[3.125384] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[3.149254] (motor_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_control__type_support.cpp.o\x1b[0m\n'}
+[3.149680] (motor_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_command__type_support.cpp.o\x1b[0m\n'}
+[3.149843] (motor_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_status__type_support.cpp.o\x1b[0m\n'}
+[3.179586] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[3.205275] (motor_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_command__type_support.cpp.o\x1b[0m\n'}
+[3.206521] (-) TimerEvent: {}
+[3.210666] (motor_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_status__type_support.cpp.o\x1b[0m\n'}
+[3.220923] (motor_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_control__type_support.cpp.o\x1b[0m\n'}
+[3.230448] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[3.267010] (motor_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_control__type_support.cpp.o\x1b[0m\n'}
+[3.267600] (motor_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[3.306744] (-) TimerEvent: {}
+[3.327678] (motor_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_status__type_support.cpp.o\x1b[0m\n'}
+[3.367508] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[3.394081] (motor_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_command__type_support.c.o\x1b[0m\n'}
+[3.400552] (motor_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_control__type_support.c.o\x1b[0m\n'}
+[3.402110] (motor_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.406950] (-) TimerEvent: {}
+[3.463032] (motor_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_status__type_support.c.o\x1b[0m\n'}
+[3.490337] (motor_interfaces) StdoutLine: {'line': b'[ 57%] Built target motor_interfaces__rosidl_typesupport_c\n'}
+[3.507118] (-) TimerEvent: {}
+[3.522616] (motor_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking C shared library libmotor_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.577285] (motor_interfaces) StdoutLine: {'line': b'[ 59%] Built target motor_interfaces__rosidl_typesupport_introspection_c\n'}
+[3.602206] (motor_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.607233] (-) TimerEvent: {}
+[3.646798] (motor_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.660379] (motor_interfaces) StdoutLine: {'line': b'[ 63%] Built target motor_interfaces__rosidl_typesupport_cpp\n'}
+[3.707395] (-) TimerEvent: {}
+[3.740247] (motor_interfaces) StdoutLine: {'line': b'[ 63%] Built target motor_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[3.807566] (-) TimerEvent: {}
+[3.908185] (-) TimerEvent: {}
+[3.960531] (motor_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.008343] (-) TimerEvent: {}
+[4.081462] (motor_interfaces) StdoutLine: {'line': b'[ 65%] Built target motor_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[4.099568] (motor_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.108480] (-) TimerEvent: {}
+[4.209012] (-) TimerEvent: {}
+[4.309546] (-) TimerEvent: {}
+[4.410103] (-) TimerEvent: {}
+[4.510631] (-) TimerEvent: {}
+[4.540803] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[4.566397] (motor_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_control__type_support_c.cpp.o\x1b[0m\n'}
+[4.566828] (motor_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_command__type_support_c.cpp.o\x1b[0m\n'}
+[4.566986] (motor_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_status__type_support_c.cpp.o\x1b[0m\n'}
+[4.610791] (-) TimerEvent: {}
+[4.711409] (-) TimerEvent: {}
+[4.812034] (-) TimerEvent: {}
+[4.912663] (-) TimerEvent: {}
+[5.013295] (-) TimerEvent: {}
+[5.113934] (-) TimerEvent: {}
+[5.125723] (motor_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.214119] (-) TimerEvent: {}
+[5.246417] (motor_interfaces) StdoutLine: {'line': b'[ 76%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[5.265450] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces\x1b[0m\n'}
+[5.282260] (motor_interfaces) StdoutLine: {'line': b'[ 76%] Built target motor_interfaces\n'}
+[5.299442] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__py\x1b[0m\n'}
+[5.314221] (-) TimerEvent: {}
+[5.316435] (motor_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.414400] (-) TimerEvent: {}
+[5.515145] (-) TimerEvent: {}
+[5.615912] (-) TimerEvent: {}
+[5.716670] (-) TimerEvent: {}
+[5.817413] (-) TimerEvent: {}
+[5.918184] (-) TimerEvent: {}
+[6.018941] (-) TimerEvent: {}
+[6.119694] (-) TimerEvent: {}
+[6.190424] (motor_interfaces) StdoutLine: {'line': b'[ 78%] Built target motor_interfaces__py\n'}
+[6.208421] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__python\x1b[0m\n'}
+[6.219759] (-) TimerEvent: {}
+[6.254262] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_control_s.c.o\x1b[0m\n'}
+[6.254711] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_command_s.c.o\x1b[0m\n'}
+[6.254842] (motor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__python.dir/rosidl_generator_py/motor_interfaces/msg/_motor_status_s.c.o\x1b[0m\n'}
+[6.319949] (-) TimerEvent: {}
+[6.399402] (motor_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/libmotor_interfaces__python.so\x1b[0m\n'}
+[6.420072] (-) TimerEvent: {}
+[6.459067] (motor_interfaces) StdoutLine: {'line': b'[ 87%] Built target motor_interfaces__python\n'}
+[6.475496] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[6.475913] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[6.476034] (motor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motor_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[6.504392] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.504825] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.504955] (motor_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.520213] (-) TimerEvent: {}
+[6.620882] (-) TimerEvent: {}
+[6.631676] (motor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.632172] (motor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.632313] (motor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.683807] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[6.684233] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_c__pyext\n'}
+[6.717231] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.720914] (-) TimerEvent: {}
+[6.743889] (motor_interfaces) JobEnded: {'identifier': 'motor_interfaces', 'rc': 'SIGINT'}
+[6.756000] (motor_controller) JobSkipped: {'identifier': 'motor_controller'}
+[6.756231] (-) EventReactorShutdown: {}
