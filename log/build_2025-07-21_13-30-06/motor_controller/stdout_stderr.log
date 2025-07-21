@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/rs03_motor_parser.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable motor_node[0m
+[100%] Built target motor_node
+-- Install configuration: ""
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node
+-- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node" to ""
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/se_motor_parser.hpp
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/rs03_motor_parser.hpp
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/math_ops.hpp
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/motor_parser_base.hpp
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/motors.yaml
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/devices.yaml
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch/motor_node.launch.py
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/package_run_dependencies/motor_controller
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/parent_prefix_path/motor_controller
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.sh
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.dsv
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.sh
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.dsv
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.bash
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.sh
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.zsh
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.dsv
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.dsv
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/packages/motor_controller
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig.cmake
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig-version.cmake
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.xml

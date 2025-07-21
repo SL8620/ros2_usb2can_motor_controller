@@ -1,7 +1,7 @@
 set(_AMENT_PACKAGE_NAME "motor_interfaces")
 set(motor_interfaces_VERSION "0.1.0")
 set(motor_interfaces_MAINTAINER "Your Name <sl_8620@163.com>")
-set(motor_interfaces_BUILD_DEPENDS )
+set(motor_interfaces_BUILD_DEPENDS "rosidl_default_generators")
 set(motor_interfaces_BUILDTOOL_DEPENDS "ament_cmake" "rosidl_default_generators")
 set(motor_interfaces_BUILD_EXPORT_DEPENDS )
 set(motor_interfaces_BUILDTOOL_EXPORT_DEPENDS )

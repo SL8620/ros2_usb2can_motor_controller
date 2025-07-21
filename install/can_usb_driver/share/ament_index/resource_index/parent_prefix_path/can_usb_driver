@@ -1,1 +1,1 @@
-/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/foxy
+/opt/ros/humble

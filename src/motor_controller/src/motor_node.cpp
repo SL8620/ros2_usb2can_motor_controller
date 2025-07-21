@@ -245,28 +245,55 @@ private:
      */
     void handle_can_feedback(const std::string& dev_name, const can_usb_driver::CanMessage& msg) 
     {
-        // 通过设备+通道+ID定位电机
-        std::string key = get_key(dev_name, msg.canPort, msg.id);
-        
-        if (motor_map_.count(key)) 
+        for (auto& [motor_name, parser] : parser_map_) 
         {
-            const auto& motor = motor_map_[key];      // 获取电机配置
-            auto parser = parser_map_[motor.name];    // 获取对应解析器
+            // 1. 检查报文是否匹配当前解析器类型
+            if (!parser->match_feedback(msg)) 
+            {
+                continue;
+            }
 
-            // 解析CAN数据并发布状态
-            MotorStatus status;
-            status.device = motor.device;    // 填充设备信息
-            status.channel = motor.channel;
-            status.id = motor.id;
-            
-            parser->unpackStatus(msg.data, status);  // 协议解析
-            status_pub_->publish(status);            // 发布状态
-            
-            RCLCPP_DEBUG(get_logger(), "Published status for %s", key.c_str());
-        } 
-        else 
-        {
-            RCLCPP_WARN(get_logger(), "Unknown CAN message from %s", key.c_str());
+            try 
+            {
+                // 2. 提取电机ID（可能抛出异常）
+                uint8_t motor_id = parser->extract_motor_id(msg);
+                
+                // 3. 生成唯一键并验证电机存在性
+                std::string key = get_key(dev_name, msg.canPort, motor_id);
+                {
+                    if (motor_map_.find(key) == motor_map_.end()) 
+                    {
+                        RCLCPP_WARN(get_logger(), 
+                            "Received feedback for unregistered motor: %s (Device: %s, CAN ID: %d)", 
+                            key.c_str(), dev_name.c_str(), motor_id);
+                        continue;
+                    }
+
+                    // 4. 获取电机配置
+                    const MotorInfo& motor = motor_map_.at(key);
+                    
+                    // 5. 解析报文数据
+                    MotorStatus status;
+                    status.device = motor.device;
+                    status.channel = motor.channel;
+                    status.id = motor.id;
+                    
+                    parser->unpackStatus(msg.data, status);
+
+                    // 6. 发布状态（无锁操作）
+                    status_pub_->publish(status);
+                    
+                    RCLCPP_DEBUG(get_logger(), 
+                        "Published status for %s (CAN ID: %d)", 
+                        motor.name.c_str(), motor_id);
+                }
+            } 
+            catch (const std::exception& e) 
+            {
+                RCLCPP_ERROR(get_logger(), 
+                    "Failed to process CAN message: %s (Device: %s)", 
+                    e.what(), dev_name.c_str());
+            }
         }
     }
 

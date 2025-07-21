@@ -90,6 +90,24 @@ void RS03Parser::packCommand(const motor_interfaces::msg::MotorControl& ctrl, st
     data[7] = t_int & 0xFF;
 }
 
+bool RS03Parser::match_feedback(const can_usb_driver::CanMessage& msg) const
+{
+    // MIT模式，主机id设置为66,状态反馈报文id为主机报文
+    if(msg.id == 0x66)    
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+uint8_t RS03Parser::extract_motor_id(const can_usb_driver::CanMessage& msg) const
+{
+    // MIT模式，反馈报文【0】为电机id
+    return msg.data[0];
+}
 
 void RS03Parser::unpackStatus(const std::vector<uint8_t>& data, motor_interfaces::msg::MotorStatus& status)
 {

@@ -10,22 +10,16 @@
   <!-- 构建工具依赖 -->
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <!-- 构建依赖 -->
-  <build_depend>rclcpp</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_depend>motor_interfaces</build_depend>
-  <build_depend>can_usb_driver</build_depend>
-  <build_depend>yaml-cpp</build_depend>
+  <!-- 通用依赖（编译、导出、运行均需要） -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>motor_interfaces</depend>
+  <depend>can_usb_driver</depend>
+  <depend>yaml-cpp</depend>
 
-  <!-- 运行依赖 -->
-  <exec_depend>rclcpp</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>motor_interfaces</exec_depend>
-  <exec_depend>can_usb_driver</exec_depend>
-  <exec_depend>yaml-cpp</exec_depend>
+  <!-- 仅运行时需要的依赖 -->
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
-
 
   <!-- 导出构建类型 -->
   <export>

@@ -13,6 +13,8 @@ public:
     void packCommand(const motor_interfaces::msg::MotorControl& cmd,
                      std::vector<uint8_t>& data) override;
 
+    bool match_feedback(const can_usb_driver::CanMessage &msg) const override;
+    uint8_t extract_motor_id(const can_usb_driver::CanMessage &msg) const override;
     void unpackStatus(const std::vector<uint8_t>& data,
                       motor_interfaces::msg::MotorStatus& status) override;
 

@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c.o"
+  "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c.o.d"
   "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__functions.c.o"
+  "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__functions.c.o.d"
   "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_status__functions.c.o"
+  "CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_status__functions.c.o.d"
   "libmotor_interfaces__rosidl_generator_c.pdb"
   "libmotor_interfaces__rosidl_generator_c.so"
   "rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c"

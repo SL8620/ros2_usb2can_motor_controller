@@ -1,0 +1,22 @@
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/rs03_motor_parser.cpp:106:44:[m[K [01;31m[Kerror: [m[K‘[01m[KCanMessage[m[K’ does not name a type
+  106 | uint8_t RS03Parser::extract_motor_id(const [01;31m[KCanMessage[m[K& msg) const
+      |                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/rs03_motor_parser.cpp:106:9:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kuint8_t RS03Parser::extract_motor_id(const int&) const[m[K’
+  106 | uint8_t [01;31m[KRS03Parser[m[K::extract_motor_id(const CanMessage& msg) const
+      |         [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/rs03_motor_parser.cpp:1[m[K:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/include/motor_controller/rs03_motor_parser.hpp:17:13:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual uint8_t RS03Parser::extract_motor_id(const can_usb_driver::CanMessage&) const[m[K’
+   17 |     uint8_t [01;36m[Kextract_motor_id[m[K(const can_usb_driver::CanMessage &msg) const override;
+      |             [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/include/motor_controller/rs03_motor_parser.hpp:6:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RS03Parser[m[K’ defined here
+    6 | class [01;36m[KRS03Parser[m[K : public MotorParserBase
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:104：CMakeFiles/motor_node.dir/src/rs03_motor_parser.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::handle_can_feedback(const string&, const can_usb_driver::CanMessage&)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:262:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct can_usb_driver::CanMessage[m[K’ has no member named ‘[01m[Kchannel[m[K’
+  262 |                 std::string key = get_key(dev_name, msg.[01;31m[Kchannel[m[K, motor_id);
+      |                                                         [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76：CMakeFiles/motor_node.dir/src/motor_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/motor_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

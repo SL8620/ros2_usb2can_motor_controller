@@ -1,0 +1,282 @@
+[0.007s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces
+[0.048s] -- The C compiler identification is GNU 11.4.0
+[0.083s] -- The CXX compiler identification is GNU 11.4.0
+[0.087s] -- Detecting C compiler ABI info
+[0.138s] -- Detecting C compiler ABI info - done
+[0.143s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.143s] -- Detecting C compile features
+[0.144s] -- Detecting C compile features - done
+[0.145s] -- Detecting CXX compiler ABI info
+[0.203s] -- Detecting CXX compiler ABI info - done
+[0.210s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.210s] -- Detecting CXX compile features
+[0.211s] -- Detecting CXX compile features - done
+[0.212s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.213s] -- Found ament_cmake_core: 1.3.11 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[0.307s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.346s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.349s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.381s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.564s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.677s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.841s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.856s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.856s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.873s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.873s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.873s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.873s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.886s] -- Found PythonExtra: .so  
+[0.911s] -- Configuring done
+[0.926s] -- Generating done
+[0.932s] -- Build files have been written to: /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces
+[0.936s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces
+[0.937s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces -- -j16 -l16
+[0.968s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.976s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.981s] [  4%] Built target ament_cmake_python_copy_motor_interfaces
+[1.127s] running egg_info
+[1.128s] creating motor_interfaces.egg-info
+[1.128s] writing motor_interfaces.egg-info/PKG-INFO
+[1.128s] writing dependency_links to motor_interfaces.egg-info/dependency_links.txt
+[1.128s] writing top-level names to motor_interfaces.egg-info/top_level.txt
+[1.128s] writing manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[1.129s] reading manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[1.129s] writing manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[1.149s] [  4%] Built target ament_cmake_python_build_motor_interfaces_egg
+[1.223s] [  4%] Built target motor_interfaces__cpp
+[1.229s] [  8%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_status__functions.c.o[0m
+[1.229s] [  8%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_control__functions.c.o[0m
+[1.229s] [ 10%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_command__functions.c.o[0m
+[1.230s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.231s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.232s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.270s] [ 19%] [32m[1mLinking C shared library libmotor_interfaces__rosidl_generator_c.so[0m
+[1.301s] [ 19%] Built target motor_interfaces__rosidl_generator_c
+[1.309s] [ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.311s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.311s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.420s] [ 31%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_command__type_support.cpp.o[0m
+[1.420s] [ 31%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_control__type_support.cpp.o[0m
+[1.420s] [ 31%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_status__type_support.cpp.o[0m
+[1.434s] [ 34%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_control__type_support.cpp.o[0m
+[1.435s] [ 36%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_status__type_support.cpp.o[0m
+[1.435s] [ 38%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_command__type_support.cpp.o[0m
+[1.539s] [ 40%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_status__type_support.cpp.o[0m
+[1.539s] [ 44%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_control__type_support.cpp.o[0m
+[1.539s] [ 44%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_command__type_support.cpp.o[0m
+[1.567s] [ 46%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_command__type_support.cpp.o[0m
+[1.569s] [ 51%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_control__type_support.cpp.o[0m
+[1.569s] [ 51%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_status__type_support.cpp.o[0m
+[1.575s] [ 53%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_c.so[0m
+[1.622s] [ 59%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_command__type_support_c.cpp.o[0m
+[1.622s] [ 59%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_status__type_support_c.cpp.o[0m
+[1.622s] [ 59%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_control__type_support_c.cpp.o[0m
+[1.622s] [ 59%] Built target motor_interfaces__rosidl_typesupport_c
+[1.655s] [ 65%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_control__type_support.c.o[0m
+[1.655s] [ 65%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_status__type_support.c.o[0m
+[1.655s] [ 65%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_command__type_support.c.o[0m
+[1.689s] [ 68%] [32m[1mLinking C shared library libmotor_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.709s] [ 70%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_cpp.so[0m
+[1.718s] [ 70%] Built target motor_interfaces__rosidl_typesupport_introspection_c
+[1.746s] [ 70%] Built target motor_interfaces__rosidl_typesupport_cpp
+[1.848s] [ 72%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[1.894s] [ 72%] Built target motor_interfaces__rosidl_typesupport_introspection_cpp
+[1.948s] [ 76%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[1.949s] [ 76%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.002s] [ 76%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c
+[2.006s] [ 76%] Built target motor_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.023s] [ 76%] Built target motor_interfaces
+[2.038s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.308s] [ 78%] Built target motor_interfaces__py
+[2.322s] [ 82%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/motor_interfaces/msg/_motor_control_s.c.o[0m
+[2.323s] [ 82%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/motor_interfaces/msg/_motor_command_s.c.o[0m
+[2.323s] [ 85%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/motor_interfaces/msg/_motor_status_s.c.o[0m
+[2.399s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/motor_interfaces/libmotor_interfaces__rosidl_generator_py.so[0m
+[2.430s] [ 87%] Built target motor_interfaces__rosidl_generator_py
+[2.447s] [ 93%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.447s] [ 93%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.447s] [ 93%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.506s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.508s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.508s] [100%] [32m[1mLinking C shared library rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.534s] [100%] Built target motor_interfaces__rosidl_typesupport_c__pyext
+[2.535s] [100%] Built target motor_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.535s] [100%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.544s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces -- -j16 -l16
+[2.552s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces
+[2.557s] -- Install configuration: ""
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/rosidl_interfaces/motor_interfaces
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_command.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_control.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__functions.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__functions.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__functions.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__struct.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__struct.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__type_support.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__type_support.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__struct.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__functions.c
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__functions.c
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__type_support.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__functions.c
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_status.h
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/library_path.sh
+[2.558s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/library_path.dsv
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so
+[2.559s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so" to ""
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_fastrtps_c.h
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_fastrtps_c.h
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_fastrtps_c.h
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.559s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.559s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_introspection_c.h
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__type_support.c
+[2.559s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__type_support.c
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_introspection_c.h
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_introspection_c.h
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__type_support.c
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so
+[2.560s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so
+[2.560s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so" to ""
+[2.560s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.560s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_status.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_control.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_command.hpp
+[2.560s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__builder.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__builder.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__type_support.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__traits.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__struct.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__traits.hpp
+[2.560s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__builder.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__traits.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__type_support.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__struct.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__struct.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__type_support.hpp
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_fastrtps_cpp.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_fastrtps_cpp.hpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/dds_fastrtps
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.561s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[2.561s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__type_support.cpp
+[2.561s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__rosidl_typesupport_introspection_cpp.hpp
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__type_support.cpp
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_control__type_support.cpp
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_status__rosidl_typesupport_introspection_cpp.hpp
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_command__rosidl_typesupport_introspection_cpp.hpp
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.562s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so
+[2.562s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so" to ""
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.sh
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.dsv
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces-0.1.0-py3.10.egg-info
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces-0.1.0-py3.10.egg-info/PKG-INFO
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces-0.1.0-py3.10.egg-info/top_level.txt
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces-0.1.0-py3.10.egg-info/dependency_links.txt
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces-0.1.0-py3.10.egg-info/SOURCES.txt
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_command_s.c
+[2.562s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_control.py
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/__init__.py
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_status_s.c
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_command.py
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_status.py
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_control_s.c
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/__init__.py
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c
+[2.563s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/libmotor_interfaces__rosidl_generator_py.so
+[2.584s] Listing '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces'...
+[2.584s] Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/__init__.py'...
+[2.584s] Listing '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg'...
+[2.584s] Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/__init__.py'...
+[2.584s] Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_command.py'...
+[2.584s] Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_control.py'...
+[2.584s] Compiling '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/msg/_motor_status.py'...
+[2.587s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.587s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.587s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.587s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.587s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.587s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.587s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_py.so
+[2.587s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_py.so" to ""
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorCommand.idl
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorControl.idl
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorStatus.idl
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorCommand.msg
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorControl.msg
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/msg/MotorStatus.msg
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/package_run_dependencies/motor_interfaces
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/parent_prefix_path/motor_interfaces
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.sh
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.dsv
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/path.sh
+[2.588s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/environment/path.dsv
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.bash
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.sh
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.zsh
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/local_setup.dsv
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.dsv
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/ament_index/resource_index/packages/motor_interfaces
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport-noconfig.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cppExport.cmake
+[2.589s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig.cmake
+[2.590s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig-version.cmake
+[2.591s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.xml
+[2.592s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces

@@ -19,6 +19,8 @@ public:
 
     virtual void packCommand(const motor_interfaces::msg::MotorControl& cmd, std::vector<uint8_t>& data) = 0;
 
+    virtual bool match_feedback(const can_usb_driver::CanMessage &msg) const = 0;
+    virtual uint8_t extract_motor_id(const can_usb_driver::CanMessage &msg) const = 0;
     virtual void unpackStatus(const std::vector<uint8_t>& data, motor_interfaces::msg::MotorStatus& status) = 0;
 
     virtual void enable_motor() = 0;
