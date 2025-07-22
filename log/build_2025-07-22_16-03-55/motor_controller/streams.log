@@ -1,0 +1,16 @@
+[0.007s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.052s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[1.448s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In lambda function:
+[1.448s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:135:135:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst can_usb_driver::CanUsbDevice*[m[K’ to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[1.448s]   135 |                     [this](const can_usb_driver::CanUsbDevice* dev, const can_usb_driver::CanMessage& msg) {this->handle_can_feedback([01;31m[Kdev[m[K, msg);
+[1.448s]       |                                                                                                                                       [01;31m[K^~~[m[K
+[1.448s]       |                                                                                                                                       [01;31m[K|[m[K
+[1.448s]       |                                                                                                                                       [01;31m[Kconst can_usb_driver::CanUsbDevice*[m[K
+[1.448s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:248:49:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid MotorNode::handle_can_feedback(const string&, const can_usb_driver::CanMessage&)[m[K’
+[1.448s]   248 |     void handle_can_feedback([01;36m[Kconst std::string& dev_name[m[K, const can_usb_driver::CanMessage& msg)
+[1.448s]       |                              [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.301s] gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76：CMakeFiles/motor_node.dir/src/motor_node.cpp.o] 错误 1
+[3.301s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/motor_node.dir/all] 错误 2
+[3.301s] gmake: *** [Makefile:146：all] 错误 2
+[3.303s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '2': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16

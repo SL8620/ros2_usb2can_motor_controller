@@ -1,0 +1,37 @@
+[0.007s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.059s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[6.513s] [ 50%] [32m[1mLinking CXX executable motor_node[0m
+[6.834s] [100%] Built target motor_node
+[6.843s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[6.844s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller
+[6.850s] -- Install configuration: ""
+[6.850s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node
+[6.855s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node" to ""
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/se_motor_parser.hpp
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/rs03_motor_parser.hpp
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/math_ops.hpp
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/motor_parser_base.hpp
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/motors.yaml
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/devices.yaml
+[6.855s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch/motor_node.launch.py
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/package_run_dependencies/motor_controller
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/parent_prefix_path/motor_controller
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.sh
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.dsv
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.sh
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.dsv
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.bash
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.sh
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.zsh
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.dsv
+[6.856s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.dsv
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/packages/motor_controller
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig.cmake
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig-version.cmake
+[6.856s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.xml
+[6.858s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller

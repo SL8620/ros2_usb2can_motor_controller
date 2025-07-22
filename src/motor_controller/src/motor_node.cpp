@@ -131,10 +131,13 @@ private:
                 }       
 
                 // 设置数据回调函数（收到CAN数据时触发）
-                // device->setReceiveCallback(
-                //     [this](const can_usb_driver::CanUsbDevice* dev, const can_usb_driver::CanMessage& msg) {this->handle_can_message(dev, msg);
-                // });
+                device->setReceiveCallback(
+                    [this, name](const can_usb_driver::CanUsbDevice*, const can_usb_driver::CanMessage& msg) {
+                        this->handle_can_feedback(name, msg);  // 直接捕获name变量
+                    });
 
+                // 开启接收线程
+                device->startReceiveThread();
 
                 device_map_[name] = device;  // 加入设备列表
                 RCLCPP_INFO(get_logger(), "Loaded device: %s at %s", name.c_str(), dev_path.c_str());

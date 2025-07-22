@@ -2,6 +2,8 @@
 #include "motor_controller/math_ops.hpp"
 #include "can_usb_driver/can_usb_device.hpp"
 
+// 空载PVT测试推荐的PD数值：kp20 kd2
+
 #define P_MIN      -12.57f
 #define P_MAX       12.57f
 #define V_MIN      -20.0f

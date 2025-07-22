@@ -225,16 +225,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 10,
-			"id" : "motor_interfaces__py::@e6f4508b0ced8b0bd2fd"
-		},
-		{
 			"backtrace" : 9,
 			"id" : "motor_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 10,
 			"id" : "motor_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "motor_interfaces__py::@e6f4508b0ced8b0bd2fd"
 		}
 	],
 	"id" : "motor_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
