@@ -1,6 +1,76 @@
 motors:
-  - name: "test_000"
+  # ========== 左前腿配置 ==========
+  - name: "left_front_leg_hip"    # 左前腿髋部电机
     type: "RS03"
-    device: "usb2can_0"
+    device: "can2usb_0"           # 使用第一个USB转CAN设备
+    can_channel: 1                # CAN通道1
+    can_id: 1                     # 设备ID:1
+
+  - name: "left_front_leg_thigh"  # 左前腿大腿电机
+    type: "RS03"
+    device: "can2usb_0"
     can_channel: 1
-    can_id: 1
+    can_id: 2                     # 设备ID:2
+
+  - name: "left_front_leg_calf"   # 左前腿小腿电机
+    type: "RS03"
+    device: "can2usb_0"
+    can_channel: 1
+    can_id: 3                     # 设备ID:3
+
+  # ========== 右前腿配置 ==========
+  - name: "right_front_leg_hip"   # 右前腿髋部电机
+    type: "RS03"
+    device: "can2usb_0"           # 同一物理设备
+    can_channel: 2                # CAN通道2
+    can_id: 1                     # 设备ID:1
+
+  - name: "right_front_leg_thigh" # 右前腿大腿电机
+    type: "RS03"
+    device: "can2usb_0"
+    can_channel: 2
+    can_id: 2                     # 设备ID:2
+
+  - name: "right_front_leg_calf"  # 右前腿小腿电机
+    type: "RS03"
+    device: "can2usb_0"
+    can_channel: 2
+    can_id: 3                     # 设备ID:3
+
+  # ========== 左后腿配置 ==========
+  - name: "left_rear_leg_hip"     # 左后腿髋部电机
+    type: "RS03"
+    device: "can2usb_1"           # 使用第二个USB转CAN设备
+    can_channel: 1
+    can_id: 1                     # 设备ID:1
+
+  - name: "left_rear_leg_thigh"   # 左后腿大腿电机
+    type: "RS03"
+    device: "can2usb_1"
+    can_channel: 1
+    can_id: 2                     # 设备ID:2
+
+  - name: "left_rear_leg_calf"    # 左后腿小腿电机
+    type: "RS03"
+    device: "can2usb_1"
+    can_channel: 1
+    can_id: 3                     # 设备ID:3
+
+  # ========== 右后腿配置 ==========
+  - name: "right_rear_leg_hip"    # 右后腿髋部电机
+    type: "RS03"
+    device: "can2usb_1"
+    can_channel: 2                # CAN通道2
+    can_id: 1                     # 设备ID:1
+
+  - name: "right_rear_leg_thigh"  # 右后腿大腿电机
+    type: "RS03"
+    device: "can2usb_1"
+    can_channel: 2
+    can_id: 2                     # 设备ID:2
+
+  - name: "right_rear_leg_calf"   # 右后腿小腿电机
+    type: "RS03"
+    device: "can2usb_1"
+    can_channel: 2
+    can_id: 3                     # 设备ID:3
