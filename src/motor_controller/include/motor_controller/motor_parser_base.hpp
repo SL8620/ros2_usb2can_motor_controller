@@ -1,3 +1,12 @@
+/*** 
+ * @Author: SL8620
+ * @Date: 2025-07-21 10:37:45
+ * @LastEditTime: 2025-07-21 10:41:43
+ * @LastEditors: SL8620
+ * @Description: 
+ * @FilePath: \ros2_usb2can_motor_controller\src\motor_controller\include\motor_controller\motor_parser_base.hpp
+ * @
+ */
 #pragma once
 
 // namespace can_usb_driver{
@@ -19,6 +28,7 @@ public:
 
     virtual void packCommand(const motor_interfaces::msg::MotorControl& cmd, std::vector<uint8_t>& data) = 0;
 
+    virtual bool match_feedback(const can_usb_driver::CanMessage& msg) = 0;
     virtual void unpackStatus(const std::vector<uint8_t>& data, motor_interfaces::msg::MotorStatus& status) = 0;
 
     virtual void enable_motor() = 0;
