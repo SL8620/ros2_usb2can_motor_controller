@@ -111,71 +111,48 @@ void CanUsbDevice::setReceiveCallback(CanMessageCallback cb)
 
 bool CanUsbDevice::sendCanMessage(const CanMessage& msg) 
 {
-    if (fd_ < 0) {
-        RCLCPP_ERROR(rclcpp::get_logger("can_usb_device"), "CAN device not open!");
-        return false;
-    }
+    int port = msg.canPort;
+    if (port != CanPort_1 && port != CanPort_2) return false;
 
-    constexpr size_t MAX_TX_QUEUE = 8192; // 可以根据内存和消息频率调整
     {
-        std::lock_guard<std::mutex> lock(tx_queue_mutex_);
-        if (tx_queue_.size() >= MAX_TX_QUEUE) {
-            RCLCPP_WARN(rclcpp::get_logger("can_usb_device"), "TX queue full, dropping message");
-            return false;
-        }
-        tx_queue_.push(msg);
+        std::lock_guard<std::mutex> lock(tx_queues_[port].mtx);
+        tx_queues_[port].queue.push_back(msg);
     }
-    tx_cv_.notify_one();
+    
     return true;
 }
 
-
-void CanUsbDevice::txThreadFunc() 
+void CanUsbDevice::txThreadFunc(int interval_us=300) 
 {
     while (runningTx_) 
     {
-        CanMessage msg;
-
-        // 1️⃣ 从队列取消息，只锁队列
+        for (int port = CanPort_1; port <= CanPort_2; ++port) 
         {
-            std::unique_lock<std::mutex> lock(tx_queue_mutex_);
-            tx_cv_.wait(lock, [this]{ return !tx_queue_.empty() || !runningTx_; });
-            if (!runningTx_) break;
-            msg = tx_queue_.front();
-            tx_queue_.pop();
-        } // 队列锁在这里释放
+            std::vector<CanMessage> msgs_to_send;
+            {
+                std::lock_guard<std::mutex> lock(tx_queues_[port].mtx);
+                msgs_to_send.swap(tx_queues_[port].queue);
+            }
 
-        // 2️⃣ 构建发送缓冲
-        uint8_t buf[16];
-        size_t idx = 0;
-        buf[idx++] = 0xB0 | msg.canPort;
-        buf[idx++] = ((msg.data.size() & 0x0F) << 4) | (msg.canIdType);
+            if (!msgs_to_send.empty()) 
+            {
+                std::vector<uint8_t> buffer;
+                for (const auto& msg : msgs_to_send) 
+                {
+                    buffer.insert(buffer.end(), msg.data.begin(), msg.data.end());
+                }
 
-        if (msg.canIdType == CanId_extended) 
-        {
-            buf[idx++] = (msg.id >> 24) & 0xFF;
-            buf[idx++] = (msg.id >> 16) & 0xFF;
-            buf[idx++] = (msg.id >> 8) & 0xFF;
-            buf[idx++] = msg.id & 0xFF;
-        } 
-        else 
-        {
-            buf[idx++] = msg.id & 0xFF;
+                if (!buffer.empty()) 
+                {
+                    write(buffer.data(), buffer.size());
+                }
+            }
         }
 
-        for (auto b : msg.data) 
-        {
-            if (idx >= sizeof(buf)) break;
-            buf[idx++] = b;
-        }
-
-        // 3️⃣ 只锁写 fd_
-        {
-            std::lock_guard<std::mutex> lock(tx_mutex_);
-            ssize_t n = ::write(fd_, buf, idx);
-        }
+        std::this_thread::sleep_for(std::chrono::microseconds(interval_us));
     }
 }
+
 
 void CanUsbDevice::startReceiveThread() 
 {
