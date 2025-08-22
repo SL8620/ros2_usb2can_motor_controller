@@ -1,0 +1,42 @@
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription, ExecuteProcess, TimerAction
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
+import os
+
+def generate_launch_description():
+    # 获取包共享目录路径
+    motor_test_dir = get_package_share_directory('motor_test')
+    motor_controller_dir = get_package_share_directory('motor_controller')  # 假设电机节点包名
+    
+    # 构建配置文件和launch文件路径
+    config_file = os.path.join(motor_test_dir, 'config', 'test.yaml')
+    motor_node_launch = os.path.join(motor_controller_dir, 'launch', 'motor_node.launch.py')
+    
+    # 1. 首先启动电机节点
+    motor_node_launch_action = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(motor_node_launch),
+        launch_arguments={}.items()
+    )
+    
+    # 2. 延迟2秒后启动测试节点（确保电机节点完全启动）
+    test_node_action = TimerAction(
+        period=2.0,  # 2秒延迟
+        actions=[
+            Node(
+                package='motor_test',
+                executable='motor_test_node',
+                name='motor_test_node',
+                output='screen',
+                parameters=[{
+                    'config_file': config_file
+                }]
+            )
+        ]
+    )
+    
+    return LaunchDescription([
+        motor_node_launch_action,
+        test_node_action
+    ])
