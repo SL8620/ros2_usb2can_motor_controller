@@ -116,7 +116,7 @@ bool CanUsbDevice::sendCanMessage(const CanMessage& msg)
         return false;
     }
 
-    constexpr size_t MAX_TX_QUEUE = 4096; // 可以根据内存和消息频率调整
+    constexpr size_t MAX_TX_QUEUE = 8192; // 可以根据内存和消息频率调整
     {
         std::lock_guard<std::mutex> lock(tx_queue_mutex_);
         if (tx_queue_.size() >= MAX_TX_QUEUE) {
