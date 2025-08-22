@@ -54,19 +54,19 @@ public:
         // 订阅控制指令（ROS 2话题）
         command_sub_ = create_subscription<MotorCommand>(
             "/motor_command",  // 话题名称
-            10,                // 消息队列长度
+            24,                // 消息队列长度
             std::bind(&MotorNode::on_command, this, _1)  // 回调绑定
         );
 
         // 订阅控制指令（模式/使能等）
         control_sub_ = create_subscription<MotorControl>(
             "/motor_control", 
-            10, 
+            24, 
             std::bind(&MotorNode::on_control, this, _1)
         );
 
         // 创建状态发布器
-        status_pub_ = create_publisher<MotorStatus>("/motor_status", 10);
+        status_pub_ = create_publisher<MotorStatus>("/motor_status", 48);
     }
 
 private:
@@ -89,6 +89,11 @@ private:
     std::string get_key(const std::string& device, uint8_t channel, uint8_t id) const {
         return device + "_" + std::to_string(channel) + "_" + std::to_string(id);
     }
+
+    // 新增互斥锁
+    std::shared_mutex motor_mutex_;   // 替换为读写锁
+    std::shared_mutex device_mutex_;    // 替换为读写锁
+    std::shared_mutex parser_mutex_;    // 替换为读写锁   
 
     // 关键数据结构
     std::unordered_map<std::string, std::shared_ptr<can_usb_driver::CanUsbDevice>> device_map_;  // CAN设备列表（key=设备名）
@@ -164,6 +169,8 @@ private:
      */
     void load_motors(const std::string& path) 
     {
+        std::unique_lock<std::shared_mutex> lock(motor_mutex_);  // 写锁（独占）
+
         try 
         {
             YAML::Node config = YAML::LoadFile(path);
@@ -248,57 +255,40 @@ private:
      */
     void handle_can_feedback(const std::string& dev_name, const can_usb_driver::CanMessage& msg) 
     {
+        // 1. motor_map_ / parser_map_ 只读，无锁
         for (auto& [motor_name, parser] : parser_map_) 
         {
-            // 1. 检查报文是否匹配当前解析器类型
-            if (!parser->match_feedback(msg)) 
-            {
-                continue;
-            }
+            if (!parser->match_feedback(msg)) continue;
 
             try 
             {
-                // 2. 提取电机ID（可能抛出异常）
                 uint8_t motor_id = parser->extract_motor_id(msg);
-                
-                // 3. 生成唯一键并验证电机存在性
                 std::string key = get_key(dev_name, msg.canPort, motor_id);
+
+                auto it = motor_map_.find(key);
+                if (it == motor_map_.end()) 
                 {
-                    if (motor_map_.find(key) == motor_map_.end()) 
-                    {
-                        RCLCPP_WARN(get_logger(), 
-                            "Received feedback for unregistered motor: %s (Device: %s, CAN ID: %d)", 
-                            key.c_str(), dev_name.c_str(), motor_id);
-                        continue;
-                    }
-
-                    // 4. 获取电机配置
-                    const MotorInfo& motor = motor_map_.at(key);
-                    
-                    // 5. 解析报文数据
-                    MotorStatus status;
-                    status.device = motor.device;
-                    status.channel = motor.channel;
-                    status.id = motor.id;
-                    
-                    parser->unpackStatus(msg.data, status);
-
-                    // 6. 发布状态（无锁操作）
-                    status_pub_->publish(status);
-                    
-                    RCLCPP_DEBUG(get_logger(), 
-                        "Published status for %s (CAN ID: %d)", 
-                        motor.name.c_str(), motor_id);
+                    RCLCPP_WARN(get_logger(), "Received feedback for unregistered motor: %s", key.c_str());
+                    continue;
                 }
+
+                const MotorInfo& motor = it->second;
+
+                MotorStatus status;
+                status.device = motor.device;
+                status.channel = motor.channel;
+                status.id = motor.id;
+
+                parser->unpackStatus(msg.data, status);
+                status_pub_->publish(status);
             } 
             catch (const std::exception& e) 
             {
-                RCLCPP_ERROR(get_logger(), 
-                    "Failed to process CAN message: %s (Device: %s)", 
-                    e.what(), dev_name.c_str());
+                RCLCPP_ERROR(get_logger(), "Failed to process CAN message: %s", e.what());
             }
         }
     }
+
 
     /**
      * @brief 运动指令回调（位置/速度/力矩控制）
@@ -308,32 +298,50 @@ private:
      */
     void on_control(const MotorControl::SharedPtr msg) 
     {
-        std::string key = get_key(msg->device, msg->channel, msg->id);
-        
-        if (motor_map_.count(key)) 
-        {
-            const auto& motor = motor_map_[key];      // 获取电机配置
-            auto parser = parser_map_[motor.name];    // 获取协议解析器
+        const std::string key = get_key(msg->device, msg->channel, msg->id);
 
-            // 构造CAN消息
-            can_usb_driver::CanMessage can_msg;
-            can_msg.canPort = msg->channel;  // 设置CAN通道
-            can_msg.id = msg->id;            // 设置目标ID
-            can_msg.canIdType = CanId_classic;
-            
-            // 将ROS指令转换为CAN数据帧
-            parser->packCommand(*msg, can_msg.data);
-            
-            // 通过对应设备发送CAN消息
-            device_map_[motor.device]->sendCanMessage(can_msg);
-            
-            RCLCPP_DEBUG(get_logger(), "Sent command to %s", key.c_str());
+        // 1. 查找电机配置（不加锁，motor_map_ 初始化后只读）
+        auto it = motor_map_.find(key);
+        if (it == motor_map_.end()) 
+        {
+            RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 1000, "Motor not found: %s", key.c_str());
+            return;
+        }
+        const auto& motor = it->second;
+
+        // 2. 查找设备（可选加锁 device_mutex_，或假设初始化后固定不变）
+        auto dev_it = device_map_.find(motor.device);
+        if (dev_it == device_map_.end()) 
+        {
+            RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 1000, "Device %s offline", motor.device.c_str());
+            return;
+        }
+
+        // 3. 构造CAN消息（无锁）
+        can_usb_driver::CanMessage can_msg;
+        can_msg.canPort = msg->channel;
+        can_msg.id = msg->id;
+        can_msg.canIdType = CanId_classic;
+
+        // 4. 协议打包（parser_map_ 不加锁，高频只读）
+        auto parser = parser_map_[motor.name];
+        if (!parser->packCommand(*msg, can_msg.data))
+        {
+            RCLCPP_ERROR_THROTTLE(get_logger(), *get_clock(), 1000, "Pack failed: %s", motor.name.c_str());
+            return;
+        }
+
+        // 5. 发送消息（设备内部线程安全）
+        if (dev_it->second->sendCanMessage(can_msg)) 
+        {
+            RCLCPP_DEBUG(get_logger(), "Sent to %s", key.c_str());
         } 
         else 
         {
-            RCLCPP_WARN(get_logger(), "Motor not found for command: %s", key.c_str());
+            RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 1000, "Send failed to %s", key.c_str());
         }
     }
+
 
     /**
      * @brief 控制指令回调（使能/模式设置等）
@@ -341,43 +349,31 @@ private:
      */
     void on_command(const MotorCommand::SharedPtr msg) 
     {
-        std::string key = get_key(msg->device, msg->channel, msg->id);
-        
-        if (motor_map_.count(key)) 
-        {
-            const auto& motor = motor_map_[key];
-            auto parser = parser_map_[motor.name];
+        const std::string key = get_key(msg->device, msg->channel, msg->id);
 
-            // 执行控制指令
-            switch (msg->command_type) 
-            {
-                case 0: 
-                    parser->enable_motor();  // 使能电机
-                    RCLCPP_INFO(get_logger(), "Enabled motor %s", key.c_str());
-                    break;
-                case 1: 
-                    parser->disable_motor(); // 禁用电机
-                    RCLCPP_INFO(get_logger(), "Disabled motor %s", key.c_str());
-                    break;
-                case 2: 
-                    parser->zero_position();  // 零点校准
-                    RCLCPP_INFO(get_logger(), "Zeroed motor %s", key.c_str());
-                    break;
-                case 3: 
-                    parser->set_mode(msg->mode_type);  // 设置工作模式
-                    RCLCPP_INFO(get_logger(), "Set mode %d for motor %s", 
-                               msg->mode_type, key.c_str());
-                    break;
-                default:
-                    RCLCPP_WARN(get_logger(), "Unknown command type: %d", 
-                               msg->command_type);
-            }
-        } 
-        else 
+        // 1. 高频读取 motor_map_，不加锁
+        auto it = motor_map_.find(key);
+        if (it == motor_map_.end()) 
         {
-            RCLCPP_WARN(get_logger(), "Motor not found for control: %s", key.c_str());
+            RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 1000,"Motor not found: %s", key.c_str());
+            return;
+        }
+        const auto& motor = it->second;
+
+        // 2. 高频读取 parser_map_，不加锁
+        auto parser = parser_map_[motor.name]; 
+
+        // 3. 执行控制指令（无锁）
+        switch (msg->command_type) {
+            case 0:  parser->enable_motor(); break;
+            case 1:  parser->disable_motor(); break;
+            case 2:  parser->zero_position(); break;
+            case 3:  parser->set_mode(msg->mode_type); break;
+            default: RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 1000,
+                        "Unknown command type: %d", msg->command_type);
         }
     }
+
 };
 
 /**
