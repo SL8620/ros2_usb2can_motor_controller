@@ -43,6 +43,7 @@ namespace can_usb_driver{
         void startReceiveThread();
         void stopReceiveThread();
         void setReceiveCallback(CanMessageCallback cb); 
+        void txThreadFunc();
 
         uint64_t getFramesSent() const { return framesSent_; }
         uint64_t getFramesReceived() const { return framesReceived_; }
@@ -55,12 +56,16 @@ namespace can_usb_driver{
         std::string devicePath_;
         int fd_;
         std::thread recvThread_;
-        std::atomic<bool> running_;
-        std::mutex ioMutex_;
+        std::atomic<bool> runningRx_{false};
         CanMessageCallback receiveCallback_;
 
         std::atomic<uint64_t> framesSent_{0};       // 发送帧数量统计，调用公有方法可获取
         std::atomic<uint64_t> framesReceived_{0};   // 接收帧数量统计，调用公有方法可获取
+        
+        std::queue<CanMessage> tx_queue_;
+        std::mutex tx_queue_mutex_;
+        std::condition_variable tx_cv_;
+        std::atomic<bool> runningTx_{false};
     };
 }
 

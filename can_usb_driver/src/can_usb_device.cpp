@@ -34,7 +34,7 @@ static std::string findDefaultDevice()
 }
 
 CanUsbDevice::CanUsbDevice(const std::string& devicePath, const std::string& deviceName) 
-                        : devicePath_(devicePath.empty() ? findDefaultDevice() : devicePath), devName_(deviceName), fd_(-1), running_(false) {}
+                        : devicePath_(devicePath.empty() ? findDefaultDevice() : devicePath), devName_(deviceName), fd_(-1), runningRx_(false) {}
 
 CanUsbDevice::~CanUsbDevice() 
 {
@@ -83,13 +83,22 @@ bool CanUsbDevice::open()
         return false;
     }
 
+    runningTx_ = true;   // ⚠ 在创建线程前设置
+    tx_thread_ = std::thread(&CanUsbDevice::txThreadFunc, this);
+
     return true;
 }
 
 void CanUsbDevice::close() 
 {
-    if (fd_ >= 0) 
-    {
+    runningTx_ = false;
+    tx_cv_.notify_all();
+    if (tx_thread_.joinable()) tx_thread_.join();
+
+    runningRx_ = false;
+    if (recvThread_.joinable()) recvThread_.join();
+
+    if (fd_ >= 0) {
         ::close(fd_);
         fd_ = -1;
     }
@@ -102,51 +111,81 @@ void CanUsbDevice::setReceiveCallback(CanMessageCallback cb)
 
 bool CanUsbDevice::sendCanMessage(const CanMessage& msg) 
 {
-    std::lock_guard<std::mutex> lock(ioMutex_);
     if (fd_ < 0) {
         RCLCPP_ERROR(rclcpp::get_logger("can_usb_device"), "CAN device not open!");
         return false;
     }
 
-    uint8_t buf[16]; // 足够容纳一帧（头+flags+id+data）
-    size_t idx = 0;
-
-    buf[idx++] = 0xB0 | msg.canPort;
-    buf[idx++] = ((msg.data.size() & 0x0F) << 4) | (msg.canIdType);
-
-    if (msg.canIdType == CanId_extended) {
-        buf[idx++] = (msg.id >> 24) & 0xFF;
-        buf[idx++] = (msg.id >> 16) & 0xFF;
-        buf[idx++] = (msg.id >>  8) & 0xFF;
-        buf[idx++] =  msg.id        & 0xFF;
-    } 
-    else 
+    constexpr size_t MAX_TX_QUEUE = 4096; // 可以根据内存和消息频率调整
     {
-        buf[idx++] = msg.id & 0xFF;
+        std::lock_guard<std::mutex> lock(tx_queue_mutex_);
+        if (tx_queue_.size() >= MAX_TX_QUEUE) {
+            RCLCPP_WARN(rclcpp::get_logger("can_usb_device"), "TX queue full, dropping message");
+            return false;
+        }
+        tx_queue_.push(msg);
     }
-
-    for (auto b : msg.data) 
-    {
-        if (idx >= sizeof(buf)) break; // 防止溢出
-        buf[idx++] = b;
-    }
-
-    // 直接一次 write，返回是否写成功（全部字节写出）
-    ssize_t n = ::write(fd_, buf, idx);
-    framesSent_++;
-    return n == (ssize_t)idx;
+    tx_cv_.notify_one();
+    return true;
 }
 
 
+void CanUsbDevice::txThreadFunc() 
+{
+    while (runningTx_) 
+    {
+        CanMessage msg;
+
+        // 1️⃣ 从队列取消息，只锁队列
+        {
+            std::unique_lock<std::mutex> lock(tx_queue_mutex_);
+            tx_cv_.wait(lock, [this]{ return !tx_queue_.empty() || !runningTx_; });
+            if (!runningTx_) break;
+            msg = tx_queue_.front();
+            tx_queue_.pop();
+        } // 队列锁在这里释放
+
+        // 2️⃣ 构建发送缓冲
+        uint8_t buf[16];
+        size_t idx = 0;
+        buf[idx++] = 0xB0 | msg.canPort;
+        buf[idx++] = ((msg.data.size() & 0x0F) << 4) | (msg.canIdType);
+
+        if (msg.canIdType == CanId_extended) 
+        {
+            buf[idx++] = (msg.id >> 24) & 0xFF;
+            buf[idx++] = (msg.id >> 16) & 0xFF;
+            buf[idx++] = (msg.id >> 8) & 0xFF;
+            buf[idx++] = msg.id & 0xFF;
+        } 
+        else 
+        {
+            buf[idx++] = msg.id & 0xFF;
+        }
+
+        for (auto b : msg.data) 
+        {
+            if (idx >= sizeof(buf)) break;
+            buf[idx++] = b;
+        }
+
+        // 3️⃣ 只锁写 fd_
+        {
+            std::lock_guard<std::mutex> lock(tx_mutex_);
+            ssize_t n = ::write(fd_, buf, idx);
+        }
+    }
+}
+
 void CanUsbDevice::startReceiveThread() 
 {
-    running_ = true;
+    runningRx_ = true;
     recvThread_ = std::thread(&CanUsbDevice::receiveLoop, this);
 }
 
 void CanUsbDevice::stopReceiveThread() 
 {
-    running_ = false;
+    runningRx_ = false;
     if (recvThread_.joinable()) 
     {
         recvThread_.join();
@@ -159,7 +198,7 @@ void CanUsbDevice::receiveLoop()
     uint8_t temp[512];            // 单次批量读
     auto logger = rclcpp::get_logger("can_usb_device");
 
-    while (running_) 
+    while (runningRx_) 
     {
         ssize_t n = ::read(fd_, temp, sizeof(temp));
         if (n > 0) 
