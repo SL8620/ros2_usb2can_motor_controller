@@ -10,6 +10,7 @@
 #include <algorithm>
 
 #include "rclcpp/rclcpp.hpp"    // ROS 2核心功能
+#include "ringbuffer.hpp"       // 环形缓冲
 
 using namespace can_usb_driver;
 
@@ -74,7 +75,7 @@ bool CanUsbDevice::open()
     cfsetispeed(&tty, B921600);                  // 输入波特率
 
     tty.c_cc[VMIN] = 0;                          // 非阻塞读取
-    tty.c_cc[VTIME] = 10;                        // 超时时间 1 秒（10 × 100ms）
+    tty.c_cc[VTIME] = 1;                         // 超时时间 100ms
 
     if (tcsetattr(fd_, TCSANOW, &tty) != 0) 
     {
@@ -107,29 +108,35 @@ bool CanUsbDevice::sendCanMessage(const CanMessage& msg)
         return false;
     }
 
-      // 打印发送的原始数据
-    // RCLCPP_DEBUG(logger_, "Sending CAN message: port=%d, id=%d, data=[%s]", 
-    //              msg.canPort, msg.id, bytesToHex(msg.data).c_str());
+    uint8_t buf[16]; // 足够容纳一帧（头+flags+id+data）
+    size_t idx = 0;
 
-    std::vector<uint8_t> buf;
-    buf.push_back(0xB0 | msg.canPort);
-    buf.push_back(((msg.data.size() & 0x0F) << 4) | (msg.canIdType));
+    buf[idx++] = 0xB0 | msg.canPort;
+    buf[idx++] = ((msg.data.size() & 0x0F) << 4) | (msg.canIdType);
 
-    if (msg.canIdType == CanId_extended) 
-    {
-        buf.push_back((msg.id >> 24) & 0xFF);
-        buf.push_back((msg.id >> 16) & 0xFF);
-        buf.push_back((msg.id >>  8) & 0xFF);
-        buf.push_back( msg.id        & 0xFF);
+    if (msg.canIdType == CanId_extended) {
+        buf[idx++] = (msg.id >> 24) & 0xFF;
+        buf[idx++] = (msg.id >> 16) & 0xFF;
+        buf[idx++] = (msg.id >>  8) & 0xFF;
+        buf[idx++] =  msg.id        & 0xFF;
     } 
     else 
     {
-        buf.push_back(msg.id & 0xFF);
+        buf[idx++] = msg.id & 0xFF;
     }
 
-    buf.insert(buf.end(), msg.data.begin(), msg.data.end());
-    return ::write(fd_, buf.data(), buf.size()) == (ssize_t)buf.size();
+    for (auto b : msg.data) 
+    {
+        if (idx >= sizeof(buf)) break; // 防止溢出
+        buf[idx++] = b;
+    }
+
+    // 直接一次 write，返回是否写成功（全部字节写出）
+    ssize_t n = ::write(fd_, buf, idx);
+    framesSent_++;
+    return n == (ssize_t)idx;
 }
+
 
 void CanUsbDevice::startReceiveThread() 
 {
@@ -148,27 +155,40 @@ void CanUsbDevice::stopReceiveThread()
 
 void CanUsbDevice::receiveLoop() 
 {
-    std::vector<uint8_t> buffer;
-    uint8_t temp[64];
+    RingBuffer<16384> rb;         // 16KB 缓冲，够 0.5s CAN burst
+    uint8_t temp[512];            // 单次批量读
+    auto logger = rclcpp::get_logger("can_usb_device");
 
     while (running_) 
     {
-        ssize_t n = read(fd_, temp, sizeof(temp));
+        ssize_t n = ::read(fd_, temp, sizeof(temp));
         if (n > 0) 
         {
-            RCLCPP_DEBUG(rclcpp::get_logger("can_usb_device"), "Received raw data");
-            buffer.insert(buffer.end(), temp, temp + n);
+            rb.push(temp, static_cast<size_t>(n));
+
             CanMessage msg;
-            while (parseBuffer(buffer, msg)) 
+            while (tryParseOneFrame(rb, msg)) 
             {
-                if(receiveCallback_)
+                if (receiveCallback_) 
                 {
                     receiveCallback_(this, msg);
+                    framesReceived_++;
                 }
             }
+        } 
+        else if (n < 0) 
+        {
+            if (errno == EAGAIN || errno == EINTR) 
+            {
+                continue; // 临时错误
+            }
+            RCLCPP_ERROR(logger, "Read error: %s", strerror(errno));
+            break; // 设备断开或致命错误
         }
+        // n == 0 表示超时，不是错误，继续
     }
 }
+
 
 bool CanUsbDevice::parseBuffer(std::vector<uint8_t>& buffer, CanMessage& msg) 
 {
@@ -219,5 +239,58 @@ bool CanUsbDevice::parseBuffer(std::vector<uint8_t>& buffer, CanMessage& msg)
     msg.data.assign(buffer.begin() + dataStart, buffer.begin() + dataStart + dlc);
 
     buffer.erase(buffer.begin(), buffer.begin() + start + totalLen);
+    return true;
+}
+
+// 使用环形缓冲解包
+bool CanUsbDevice::tryParseOneFrame(RingBuffer<16384>& rb, CanMessage& msg) 
+{
+    if (rb.size() < 4) return false;
+
+    auto it = rb.findFirst(0xA5);
+    if (!it) {
+        rb.pop(rb.size()); // 没找到帧头，丢弃全部
+        return false;
+    }
+
+    size_t start = *it;
+    if (rb.size() - start < 4) return false;
+
+    uint8_t ctrl  = rb.get(start + 1);
+    uint8_t flags = rb.get(start + 2);
+    bool isExt    = (flags & 0x10);
+    uint8_t dlc   = flags & 0x0F;
+
+    size_t idLen   = isExt ? 4 : 1;
+    size_t totalLen = 1 + 1 + 1 + idLen + dlc + 1; // A5+ctrl+flags+id+data+5A
+
+    if (rb.size() - start < totalLen) return false;
+
+    if (rb.get(start + totalLen - 1) != 0x5A) {
+        rb.pop(start + 1); // 错帧，丢掉到下一个候选起点
+        return false;
+    }
+
+    msg.canPort   = ctrl & 0x0F;
+    msg.canIdType = isExt ? CanId_extended : CanId_classic;
+    msg.id = 0;
+
+    if (isExt) {
+        msg.id = (rb.get(start + 3) << 24) |
+                 (rb.get(start + 4) << 16) |
+                 (rb.get(start + 5) << 8)  |
+                  rb.get(start + 6);
+    } else {
+        msg.id = rb.get(start + 3);
+    }
+
+    size_t dataStart = start + 3 + idLen;
+    msg.data.clear();
+    msg.data.reserve(dlc);
+    for (size_t i = 0; i < dlc; ++i) {
+        msg.data.push_back(rb.get(dataStart + i));
+    }
+
+    rb.pop(start + totalLen); // 消费掉整帧
     return true;
 }

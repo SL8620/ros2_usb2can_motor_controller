@@ -8,8 +8,6 @@
 #include <string>
 #include <functional>
 
-#define DEFAULT_RECV_INTERVAL_MS 1  // 接收线程默认运行间隔（可宏定义控制）
-
 #define CanPort_1      0x01
 #define CanPort_2      0x02
 #define CanId_classic  0x00
@@ -46,9 +44,13 @@ namespace can_usb_driver{
         void stopReceiveThread();
         void setReceiveCallback(CanMessageCallback cb); 
 
+        uint64_t getFramesSent() const { return framesSent_; }
+        uint64_t getFramesReceived() const { return framesReceived_; }
+
     private:
         void receiveLoop();
         bool parseBuffer(std::vector<uint8_t>& buffer, CanMessage& msg);
+        bool tryParseOneFrame(RingBuffer<16384>& rb, CanMessage& msg);
 
         std::string devicePath_;
         int fd_;
@@ -56,6 +58,9 @@ namespace can_usb_driver{
         std::atomic<bool> running_;
         std::mutex ioMutex_;
         CanMessageCallback receiveCallback_;
+
+        std::atomic<uint64_t> framesSent_{0};       // 发送帧数量统计，调用公有方法可获取
+        std::atomic<uint64_t> framesReceived_{0};   // 接收帧数量统计，调用公有方法可获取
     };
 }
 
