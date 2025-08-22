@@ -24,6 +24,7 @@ RS03Parser::RS03Parser(std::shared_ptr<can_usb_driver::CanUsbDevice> device,uint
 
 void RS03Parser::enable_motor()
 {
+    std::scoped_lock lock(send_mutex_);
     can_usb_driver::CanMessage msg;
     msg.canPort = channel_;
     msg.id = id_;
@@ -35,6 +36,7 @@ void RS03Parser::enable_motor()
 
 void RS03Parser::disable_motor()
 {
+    std::scoped_lock lock(send_mutex_);
     can_usb_driver::CanMessage msg;
     msg.canPort = channel_;
     msg.id = id_;
@@ -46,6 +48,7 @@ void RS03Parser::disable_motor()
 
 void RS03Parser::zero_position()
 {
+    std::scoped_lock lock(send_mutex_);
     can_usb_driver::CanMessage msg;
     msg.canPort = channel_;
     msg.id = id_;
@@ -57,13 +60,13 @@ void RS03Parser::zero_position()
 
 void RS03Parser::set_mode(uint8_t mode)
 {
+    std::scoped_lock lock(send_mutex_);
     // mode 范围在 0~5（举例），转换为协议格式：
     can_usb_driver::CanMessage msg;
     msg.canPort = channel_;
     msg.id = id_;
     msg.canIdType = CanId_classic;
     msg.data = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, static_cast<uint8_t>(mode)};
-
     device_->sendCanMessage(msg);
 }
 

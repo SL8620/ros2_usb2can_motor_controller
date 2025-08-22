@@ -22,4 +22,6 @@ public:
     void disable_motor() override;
     void zero_position() override;
     void set_mode(uint8_t mode) override;
+private:
+    std::mutex send_mutex_; // 保护发送操作
 };
