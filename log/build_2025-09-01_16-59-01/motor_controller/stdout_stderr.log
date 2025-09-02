@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_control(motor_interfaces::msg::MotorControl_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:352:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct can_usb_driver::CanMessage[m[K’ has no member named ‘[01m[Kdlc[m[K’
+  352 |             for (int i = 0; i < can_msg.[01;31m[Kdlc[m[K; ++i) {
+      |                                         [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

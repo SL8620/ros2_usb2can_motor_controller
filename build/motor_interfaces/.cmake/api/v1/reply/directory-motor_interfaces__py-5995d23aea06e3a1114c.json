@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "motor_interfaces__py",
+		"source" : "/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces/motor_interfaces__py"
+	}
+}

@@ -1,0 +1,28 @@
+[0.008s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_test -- -j16 -l16
+[0.054s] [100%] Built target motor_test_node
+[0.062s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_test -- -j16 -l16
+[0.063s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_test
+[0.068s] -- Install configuration: ""
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/motor_test/motor_test_node
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/config
+[0.068s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/config/test.yaml
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch/motor_test.launch.py
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch/motor_test.launch.py
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/package_run_dependencies/motor_test
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/parent_prefix_path/motor_test
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/ament_prefix_path.sh
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/ament_prefix_path.dsv
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/path.sh
+[0.068s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/path.dsv
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.bash
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.sh
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.zsh
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.dsv
+[0.069s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.dsv
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/packages/motor_test
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/cmake/motor_testConfig.cmake
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/cmake/motor_testConfig-version.cmake
+[0.069s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.xml
+[0.076s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_test

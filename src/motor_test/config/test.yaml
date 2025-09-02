@@ -1,0 +1,23 @@
+# Motor Test Configuration
+# Test parameters
+test:
+  publish_frequency_hz: 1000.0    # Control message publish frequency (Hz)
+  duration_sec: 10.0              # Total test duration in seconds
+  log_interval_sec: 2.0           # Statistics logging interval
+
+# Motor configurations
+motors:
+  - name: "motor_1"
+    device: "usb2can_0"
+    channel: 1
+    id: 1
+
+  - name: "motor_2"
+    device: "usb2can_0"
+    channel: 1
+    id: 2
+
+  - name: "motor_3"
+    device: "usb2can_0"
+    channel: 1
+    id: 3

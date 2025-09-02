@@ -1,0 +1,6 @@
+msg/MotorCommand.idl
+msg/MotorCommand.msg
+msg/MotorControl.idl
+msg/MotorControl.msg
+msg/MotorStatus.idl
+msg/MotorStatus.msg

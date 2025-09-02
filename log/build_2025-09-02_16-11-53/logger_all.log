@@ -1,0 +1,340 @@
+[0.108s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.108s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7b4812cf53c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b4812c76920>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b4812c76920>>)[0m
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.209s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/nvidia/ros2_usb2can_motor_controller'
+[0.209s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.209s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.217s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extension 'ignore'
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extension 'ignore_ament_install'
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extensions ['colcon_pkg']
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extension 'colcon_pkg'
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extensions ['colcon_meta']
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extension 'colcon_meta'
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extensions ['ros']
+[0.218s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/can_usb_driver) by extension 'ros'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/can_usb_driver' with type 'ros.ament_cmake' and name 'can_usb_driver'[0m
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extension 'ignore'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extension 'ignore_ament_install'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extensions ['colcon_pkg']
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extension 'colcon_pkg'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extensions ['colcon_meta']
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extension 'colcon_meta'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extensions ['ros']
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_controller) by extension 'ros'
+[0.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/motor_controller' with type 'ros.ament_cmake' and name 'motor_controller'[0m
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extension 'ignore'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extension 'ignore_ament_install'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extensions ['colcon_pkg']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extension 'colcon_pkg'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extensions ['colcon_meta']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extension 'colcon_meta'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extensions ['ros']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_interfaces) by extension 'ros'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/motor_interfaces' with type 'ros.ament_cmake' and name 'motor_interfaces'[0m
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extension 'ignore'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extension 'ignore_ament_install'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extensions ['colcon_pkg']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extension 'colcon_pkg'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extensions ['colcon_meta']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extension 'colcon_meta'
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extensions ['ros']
+[0.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/motor_test) by extension 'ros'
+[0.222s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/motor_test' with type 'ros.ament_cmake' and name 'motor_test'[0m
+[0.222s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.222s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.222s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.222s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.222s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.234s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.234s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.235s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 253 installed packages in /opt/ros/humble[0m
+[0.241s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_args' from command line to 'None'
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_target' from command line to 'None'
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.256s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'can_usb_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'can_usb_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver', 'merge_install': False, 'path': '/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver', 'symlink_install': False, 'test_result_base': None}[0m
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'motor_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces', 'merge_install': False, 'path': '/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces', 'symlink_install': False, 'test_result_base': None}[0m
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_target' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'motor_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller', 'merge_install': False, 'path': '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller', 'symlink_install': False, 'test_result_base': None}[0m
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_target' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'motor_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'motor_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test', 'merge_install': False, 'path': '/home/nvidia/ros2_usb2can_motor_controller/src/motor_test', 'symlink_install': False, 'test_result_base': None}[0m
+[0.257s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.258s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.258s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces' with build type 'ament_cmake'
+[0.258s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_interfaces'
+[0.260s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.260s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.260s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.262s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver' with build type 'ament_cmake'
+[0.262s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/nvidia/ros2_usb2can_motor_controller/src/can_usb_driver'
+[0.262s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.262s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.266s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces -- -j16 -l16[0m
+[0.269s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j16 -l16[0m
+[0.323s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver -- -j16 -l16[0m
+[0.329s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver[0m
+[0.335s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(can_usb_driver)
+[0.336s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/can_usb_driver[0m
+[0.339s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver' for CMake module files
+[0.339s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver' for CMake config files
+[0.339s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('can_usb_driver', 'cmake_prefix_path')
+[0.340s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.ps1'
+[0.340s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.dsv'
+[0.340s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.sh'
+[0.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib'
+[0.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/bin'
+[0.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/pkgconfig/can_usb_driver.pc'
+[0.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/python3.10/site-packages'
+[0.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/bin'
+[0.342s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.ps1'
+[0.342s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.dsv'
+[0.343s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.sh'
+[0.343s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.bash'
+[0.344s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.zsh'
+[0.344s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/colcon-core/packages/can_usb_driver)
+[0.344s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(can_usb_driver)
+[0.345s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver' for CMake module files
+[0.345s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver' for CMake config files
+[0.345s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('can_usb_driver', 'cmake_prefix_path')
+[0.345s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.ps1'
+[0.345s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.dsv'
+[0.345s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/hook/cmake_prefix_path.sh'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/bin'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/pkgconfig/can_usb_driver.pc'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/lib/python3.10/site-packages'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/bin'
+[0.346s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.ps1'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.dsv'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.sh'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.bash'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/can_usb_driver/package.zsh'
+[0.348s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver/share/colcon-core/packages/can_usb_driver)
+[0.473s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces -- -j16 -l16[0m
+[0.474s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces[0m
+[0.510s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_interfaces)
+[0.510s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces' for CMake module files
+[0.511s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_interfaces[0m
+[0.511s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces' for CMake config files
+[0.512s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_interfaces', 'cmake_prefix_path')
+[0.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.ps1'
+[0.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.dsv'
+[0.513s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.sh'
+[0.513s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib'
+[0.513s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_interfaces', 'ld_library_path_lib')
+[0.513s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.ps1'
+[0.514s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.dsv'
+[0.514s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.sh'
+[0.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/bin'
+[0.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/pkgconfig/motor_interfaces.pc'
+[0.515s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.10/site-packages'
+[0.515s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/bin'
+[0.515s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.ps1'
+[0.516s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.dsv'
+[0.516s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.sh'
+[0.517s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.bash'
+[0.517s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.zsh'
+[0.517s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/colcon-core/packages/motor_interfaces)
+[0.518s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_interfaces)
+[0.518s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces' for CMake module files
+[0.519s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces' for CMake config files
+[0.519s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_interfaces', 'cmake_prefix_path')
+[0.519s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.ps1'
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.dsv'
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.sh'
+[0.520s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib'
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_interfaces', 'ld_library_path_lib')
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.ps1'
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.dsv'
+[0.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.sh'
+[0.521s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/bin'
+[0.521s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/pkgconfig/motor_interfaces.pc'
+[0.521s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib/python3.10/site-packages'
+[0.521s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/bin'
+[0.521s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.ps1'
+[0.521s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.dsv'
+[0.521s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.sh'
+[0.522s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.bash'
+[0.522s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/motor_interfaces/package.zsh'
+[0.522s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/share/colcon-core/packages/motor_interfaces)
+[0.522s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller' with build type 'ament_cmake'
+[0.522s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller'
+[0.522s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.522s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.525s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_test' with build type 'ament_cmake'
+[0.525s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/nvidia/ros2_usb2can_motor_controller/src/motor_test'
+[0.525s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.525s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.531s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16[0m
+[0.533s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_test -- -j16 -l16[0m
+[0.583s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16[0m
+[0.585s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller[0m
+[0.587s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_test -- -j16 -l16[0m
+[0.588s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_test[0m
+[0.592s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_controller)
+[0.592s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller' for CMake module files
+[0.592s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller[0m
+[0.592s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller' for CMake config files
+[0.593s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_controller', 'cmake_prefix_path')
+[0.594s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.ps1'
+[0.594s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.dsv'
+[0.594s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.sh'
+[0.595s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib'
+[0.595s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/bin'
+[0.595s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/pkgconfig/motor_controller.pc'
+[0.595s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/python3.10/site-packages'
+[0.595s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/bin'
+[0.595s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.ps1'
+[0.596s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.dsv'
+[0.596s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.sh'
+[0.596s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.bash'
+[0.596s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.zsh'
+[0.596s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/colcon-core/packages/motor_controller)
+[0.597s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_controller)
+[0.597s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller' for CMake module files
+[0.597s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller' for CMake config files
+[0.597s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_controller', 'cmake_prefix_path')
+[0.597s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.ps1'
+[0.598s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.dsv'
+[0.598s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/hook/cmake_prefix_path.sh'
+[0.598s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib'
+[0.598s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/bin'
+[0.598s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/pkgconfig/motor_controller.pc'
+[0.598s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/python3.10/site-packages'
+[0.599s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/bin'
+[0.599s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.ps1'
+[0.599s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.dsv'
+[0.599s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.sh'
+[0.600s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.bash'
+[0.600s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.zsh'
+[0.600s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/colcon-core/packages/motor_controller)
+[0.601s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_test)
+[0.601s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test' for CMake module files
+[0.601s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_test' returned '0': AMENT_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_test[0m
+[0.602s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test' for CMake config files
+[0.602s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_test', 'cmake_prefix_path')
+[0.602s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.ps1'
+[0.602s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.dsv'
+[0.602s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.sh'
+[0.603s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib'
+[0.603s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/bin'
+[0.603s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/pkgconfig/motor_test.pc'
+[0.603s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/python3.10/site-packages'
+[0.603s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/bin'
+[0.603s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.ps1'
+[0.603s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.dsv'
+[0.604s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.sh'
+[0.604s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.bash'
+[0.604s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.zsh'
+[0.604s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/colcon-core/packages/motor_test)
+[0.604s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(motor_test)
+[0.605s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test' for CMake module files
+[0.605s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test' for CMake config files
+[0.605s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('motor_test', 'cmake_prefix_path')
+[0.605s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.ps1'
+[0.605s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.dsv'
+[0.605s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/hook/cmake_prefix_path.sh'
+[0.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib'
+[0.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/bin'
+[0.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/pkgconfig/motor_test.pc'
+[0.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/python3.10/site-packages'
+[0.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/bin'
+[0.606s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.ps1'
+[0.607s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.dsv'
+[0.607s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.sh'
+[0.607s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.bash'
+[0.607s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.zsh'
+[0.607s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/colcon-core/packages/motor_test)
+[0.608s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[0.608s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[0.608s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[0.608s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[0.612s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.612s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.612s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[0.624s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[0.624s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/ros2_usb2can_motor_controller/install/local_setup.ps1'
+[0.625s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/nvidia/ros2_usb2can_motor_controller/install/_local_setup_util_ps1.py'
+[0.626s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/ros2_usb2can_motor_controller/install/setup.ps1'
+[0.627s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/ros2_usb2can_motor_controller/install/local_setup.sh'
+[0.627s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/nvidia/ros2_usb2can_motor_controller/install/_local_setup_util_sh.py'
+[0.628s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/ros2_usb2can_motor_controller/install/setup.sh'
+[0.628s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/ros2_usb2can_motor_controller/install/local_setup.bash'
+[0.629s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/ros2_usb2can_motor_controller/install/setup.bash'
+[0.629s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/ros2_usb2can_motor_controller/install/local_setup.zsh'
+[0.629s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/ros2_usb2can_motor_controller/install/setup.zsh'

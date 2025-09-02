@@ -1,0 +1,14 @@
+[0.008s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[0.043s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.058s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[1.497s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorNode::on_control(motor_interfaces::msg::MotorControl_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.497s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:350:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct can_usb_driver::CanMessage[m[K’ has no member named ‘[01m[Kdlc[m[K’
+[1.497s]   350 |             << " DLC: " << std::dec << static_cast<int>(can_msg.[01;31m[Kdlc[m[K)
+[1.497s]       |                                                                 [01;31m[K^~~[m[K
+[1.497s] [01m[K/home/nvidia/ros2_usb2can_motor_controller/src/motor_controller/src/motor_node.cpp:353:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct can_usb_driver::CanMessage[m[K’ has no member named ‘[01m[Kdlc[m[K’
+[1.497s]   353 |             for (int i = 0; i < can_msg.[01;31m[Kdlc[m[K; ++i) {
+[1.497s]       |                                         [01;31m[K^~~[m[K
+[3.455s] gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+[3.455s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_node.dir/all] Error 2
+[3.455s] gmake: *** [Makefile:146: all] Error 2
+[3.457s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '2': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16

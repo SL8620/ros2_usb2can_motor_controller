@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target motor_test_node[0m
+[100%] Built target motor_test_node
+-- Install configuration: ""
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/lib/motor_test/motor_test_node
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/config
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/config/test.yaml
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch/motor_test.launch.py
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/launch/motor_test.launch.py
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/package_run_dependencies/motor_test
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/parent_prefix_path/motor_test
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/ament_prefix_path.sh
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/path.sh
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/environment/path.dsv
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.bash
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.sh
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.zsh
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/local_setup.dsv
+-- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.dsv
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/ament_index/resource_index/packages/motor_test
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/cmake/motor_testConfig.cmake
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/cmake/motor_testConfig-version.cmake
+-- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_test/share/motor_test/package.xml

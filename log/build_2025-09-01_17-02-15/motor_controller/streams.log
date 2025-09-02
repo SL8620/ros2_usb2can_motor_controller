@@ -1,0 +1,37 @@
+[0.009s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[0.044s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.059s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[7.021s] [ 50%] [32m[1mLinking CXX executable motor_node[0m
+[7.372s] [100%] Built target motor_node
+[7.382s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller -- -j16 -l16
+[7.383s] Invoking command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller
+[7.389s] -- Install configuration: ""
+[7.389s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node
+[7.392s] -- Set runtime path of "/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/lib/motor_controller/motor_node" to ""
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/se_motor_parser.hpp
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/rs03_motor_parser.hpp
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/math_ops.hpp
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/include/motor_controller/motor_parser_base.hpp
+[7.393s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config
+[7.394s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/motors.yaml
+[7.394s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/config/devices.yaml
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller//launch/motor_node.launch.py
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/package_run_dependencies/motor_controller
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/parent_prefix_path/motor_controller
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.sh
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/ament_prefix_path.dsv
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.sh
+[7.395s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/environment/path.dsv
+[7.396s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.bash
+[7.396s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.sh
+[7.396s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.zsh
+[7.396s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/local_setup.dsv
+[7.396s] -- Installing: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.dsv
+[7.396s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/ament_index/resource_index/packages/motor_controller
+[7.397s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig.cmake
+[7.397s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/cmake/motor_controllerConfig-version.cmake
+[7.397s] -- Up-to-date: /home/nvidia/ros2_usb2can_motor_controller/install/motor_controller/share/motor_controller/package.xml
+[7.397s] Invoked command in '/home/nvidia/ros2_usb2can_motor_controller/build/motor_controller' returned '0': CMAKE_PREFIX_PATH=/home/nvidia/ros2_usb2can_motor_controller/install/motor_interfaces:/home/nvidia/ros2_usb2can_motor_controller/install/can_usb_driver:/home/nvidia/ros2_usb2can_motor_controller/install/motor_test:/home/nvidia/ros2_usb2can_motor_controller/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros2_usb2can_motor_controller/build/motor_controller
